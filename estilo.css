@@ -1,0 +1,211 @@
+body{
+    background-image:url("imagenes/fondo4.jpg");
+}
+
+.cartas{
+   background: rgba(220, 181, 108, 0.735) 
+}
+
+footer {
+    height: 20%;
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 2px;
+
+}
+
+footer h2 {
+    padding: 10px 0;
+}
+
+footer img {
+
+    width: 5%;
+
+}
+.titulo {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+.letraeventos {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: black;
+    text-align: center;
+  }
+
+.ingresar{
+    background-color: rgba(83, 130, 175, 0.603);
+  }
+
+  .contacto{
+    background-color: rgba(83, 130, 175, 0.603);
+  }
+
+
+
+.contenedor {
+    width: 100%;
+    height: 200px;
+}
+
+.p{
+  text-size-adjust: 15px;
+}
+
+.tarjetas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+}
+
+.box{
+    position: relative;
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+    text-align: center;
+    border-radius: 20px
+}
+
+.face{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: all 1s;
+    color: #f3f3f3;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.front{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.5);
+    transform: perspective(600px) rotateY(0deg);
+
+}
+
+.front h1{
+    color: #fff;
+    padding: 30px;
+    margin-top: 100px;
+    text-align: center;
+    font-size: 20px;
+    background: rgba(27, 27, 27, 0.596);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+}
+
+.uno{
+    background: url("imagenes/zoologia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.dos{
+    background: url("imagenes/Paleontologia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.tres{
+    background: url("imagenes/Osteologia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    }
+    
+.cuatro{
+
+    background: url("imagenes/Oología.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.cinco{
+
+    background: url("imagenes/Ictiologia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+.seis{
+
+    background: url("imagenes/Geologia.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.siete{
+
+  background: url("imagenes/Botanica.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.ocho{
+
+  background: url("imagenes/Arqueologia.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.back{
+    background: rgba(220, 181, 108, 0.735);
+    color: rgba(8, 8, 8, 0.952);
+    transform: perspective(600px) rotateY(180deg) ;
+    text-align: center;
+    border-radius: 20px;
+    
+
+}
+.back p{
+    color: var(--color-letra-back-tarjeta);
+    padding: 15px;
+    margin-top: 0px;
+    justify-content: center;
+    text-align: center;
+    font-size: 13px;
+    font-family: var(--tipo-letra-tarjeta);
+    background: rgba(27, 27, 27, 0.596);
+    
+} 
+
+.box:hover .front{
+    transform: perspective(600px) rotateY(180deg);
+}
+.box:hover .back{
+    transform: perspective(600px) rotateY(360deg);
+}
+:root{
+    --tipo-letra-tarjeta: 'Lato', sans-serif;
+    --color-fondo-back-tarjeta: #111;
+    --color-letra-back-tarjeta: #fff;
+}
+@media (max-width:480px ){
+    .tarjetas{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+}
+  
