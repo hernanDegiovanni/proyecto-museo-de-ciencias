@@ -40,6 +40,6 @@ $conex->close();
 
 
 
-header("Location:../listados/menu.php");
+header("Location:../listados/piezasList.php");
 
 ?>

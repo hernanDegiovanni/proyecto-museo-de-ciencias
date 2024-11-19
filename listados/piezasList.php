@@ -4,14 +4,6 @@
 
 // Consulta para obtener la información necesaria
 $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante where (donante.idDonante=pieza.Donante_idDonante )";
-/*$sql = "SELECT p.idPieza, p.num_inventario, p.estado_conservacion, p.fecha_ingreso, 
-               p.cantidad_de_piezas, p.clasificacion, 
-               d.nombre AS donante_nombre, d.apellido AS donante_apellido, 
-               u.nombre AS usuario_nombre, u.apellido AS usuario_apellido
-        FROM pieza p
-        JOIN donante d ON p.Donante_idDonante = d.idDonante
-        JOIN usuario_has_pieza up ON p.idPieza = up.Pieza_idPieza
-        JOIN usuario u ON up.Usuario_idUsuario = u.idUsuario";*/
 
    $result=mysqli_query($conex,$sql);
  ?>
@@ -80,9 +72,9 @@ $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante wher
                                 </button></form></div>
                             
                             <div class="d-sm-inline-block">
-                                <form action="detalles_clasificacion.php" method="post">
+                                <form action="../formularios/detalles.php" method="post">
                                 <input type="hidden" name="id" value="<?=$fila['idPieza'];?>">
-                                <button class="btn btn-outline-success btn-sm" type="submit" name="btneditar" id="btneditar">ver
+                                <button class="btn btn-outline-success btn-sm" type="submit" name="btnver" id="btnver">ver
                                 </button></form></div>
                         
                             </td>
