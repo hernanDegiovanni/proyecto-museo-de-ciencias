@@ -1,12 +1,10 @@
 <?php
 
+require_once "../conexion.php";
 
-/* 
-$sql="SELECT * 
-FROM zoologia, osteologia, ictiologia, arqueologia, botanica, geologia, octologia, paleontologia, pieza
-WHERE (pieza.idPieza=zoologia.Pieza_idPieza) AND (pieza.idPieza=osteologia.Pieza_idPieza) AND (pieza.idPieza=ictiologia.Pieza_idPieza) AND (pieza.idPieza=arqueologia.Pieza_idPieza) AND (pieza.idPieza=botanica.Pieza_idPieza) AND (pieza.idPieza=geologia.Pieza_idPieza) AND (pieza.idPieza=octologia.Pieza_idPieza) AND (pieza.idPieza=paleontologia.Pieza_idPieza)";
+$sql="SELECT * FROM usuario";
 
-$result=mysqli_query($conex,$sql); */
+$result=mysqli_query($conex,$sql);
 
  ?>
 
@@ -23,7 +21,7 @@ $result=mysqli_query($conex,$sql); */
     <section>
      
     <div class="container text-center">
-        <div class="text-center mt-5 mb-3 border border-secondary"><h3>Listado de geologia</h3></div>
+        <div class="text-center mt-5 mb-3 border border-secondary"><h3>Listado de usuarios</h3></div>
 
         
         
@@ -31,12 +29,11 @@ $result=mysqli_query($conex,$sql); */
            
             <thead>
                 <tr>
-                <th scope="col">N° de Inventario</th>
-                <th scope="col">Nombre de Usuario</th>
-                <th scope="col">Clasificación</th>
-                <th scope="col">Existencia</th>
-                <th scope="col">Fecha de Alta</th>
-                <th scope="col">Imagen</th>
+                <th scope="col">nombre y apellido</th>
+                <th scope="col">email</th>
+                <th scope="col">fecha alta </th>
+                <th scope="col">dni</th>
+                <th scope="col">tipo</th>
                 <th scope="col">Acción</th>
                 </tr>
             </thead>
@@ -55,19 +52,19 @@ $result=mysqli_query($conex,$sql); */
         
                <tr>
                     
-               <th scope="row"><?php echo $fila["idProductonum_inventario"]; ?></th>
-               <td><?=$fila["nombre"].["apellido"] ?></td>
-               <td><?=$fila["clasificacion"]; ?></td>
-               <td><?=$fila["cantidad_piezas"]; ?></td>
-               <td><?php echo $fila["fecha_ingreso"]; ?></td>
-               <td ><?php echo "<div class='listadoimg'><img src='./imagenes/".$fila['archivoimagen']."'></div>"; ?></td>
+               <td><?=$fila['nombre'] . ' ' . $fila['apellido']; ?></td>
+               <td><?=$fila["email"] ?></td>
+               <td><?=$fila["fecha_alta"]; ?></td>
+               <td><?=$fila["dni"]; ?></td>
+               <td><?=$fila["tipo_de_usuario"];?></td>
+              
 
                <td>
-               <div class="d-sm-inline-block"><form action="form_editar.php" method="post">
-		          <input type="hidden" name="id" value="<?php echo $fila['idProducto'];?>">
+               <div class="d-sm-inline-block"><form action="../formularios/form_editarUsu.php" method="post">
+		          <input type="hidden" name="idUsuario" value="<?php echo $fila['idUsuario'];?>">
 		          <button class="btn btn-outline-success btn-sm" type="submit" name="btneditar" id="btneditar">Editar</button></form></div>
-               <div class="d-sm-inline-block"><form action="form_eliminar.php" method="post">
-		          <input type="hidden" name="id" value="<?php echo $fila['idProducto'];?>">
+               <div class="d-sm-inline-block"><form action="../formularios/form_eliUsu.php" method="post">
+		          <input type="hidden" name="idUsuario" value="<?php echo $fila['idUsuario'];?>">
 		          <button class="btn btn-outline-danger btn-sm" type="submit" name="btnborrar" id="btnborrar">Borrar</button></form></div>
                 
                 </td>
@@ -101,9 +98,7 @@ $result=mysqli_query($conex,$sql); */
 
         </section>
 
-    <?php
-    include('footer.php');
-    ?>
+   
    
    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
  </body> 
@@ -126,3 +121,4 @@ if (isset($_POST['buscar']) && !empty($_POST['buscar'])){
 
 
 
+ 

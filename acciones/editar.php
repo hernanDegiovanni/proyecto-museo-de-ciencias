@@ -9,7 +9,8 @@ require_once "../conexion.php";
 require_once "funcionesval.php";
 
 
-$error = "";
+
+	$error = "";
 
  // Recibe el id oculto desde el form_editar
 
@@ -159,6 +160,7 @@ $error = "";
 				exit;
 			}
 		}
+
 
       
 
