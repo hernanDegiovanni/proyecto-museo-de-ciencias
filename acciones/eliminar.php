@@ -3,8 +3,7 @@
 require_once "../conexion.php";
 
 $id=$_POST["idPieza"];
-/* En la Base de Datos en Vista de Relaciones de la Tabla ficha, aplicar 
-el atributo ON Cascade Delete para la relacion entre ficha y socios */
+
 // Iniciar transacción
 $conex->begin_transaction();
 

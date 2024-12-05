@@ -7,6 +7,7 @@ require_once "../conexion.php";
 	$error = "";
   $id = $_POST["idUsuario"];
 
+  $_SESSION['ids']=$id;
  
    
  
@@ -29,32 +30,23 @@ require_once "../conexion.php";
                 $sql = "UPDATE usuario SET dni='$dni', nombre='$nombre', apellido='$apellido', email='$email', fecha_alta='$fecha_alta', tipo_de_usuario='$tipo_de_usuario' WHERE idUsuario=$id";
             }
 
- 
-         // Validación del correo electrónico
-         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-             $error .= "Correo electrónico no válido. ";
-             header("Location:form_editarUsu.php?msje=" . $error);
-             exit;
-         }
- 
-         // Se arma la sentencia SQL de Actualización
-         $sql = "UPDATE usuario SET dni='$dni', nombre='$nombre', apellido='$apellido', email='$email', clave='$clave', fecha_alta='$fecha', tipo_de_usuario='$tipo_de_usuario' WHERE idUsuario=$id";
- 
-         if ($conex->query($sql) === TRUE) {
+         
+         mysqli_query($conex,$sql);
+         if ($conex->query($sql) == 1) {
             // Mensaje de éxito, se pasa en la URL
-            header("Location: ../formularios/form_editarUsu.php?msje=Actualización exitosa.");
+            header("Location: ../formularios/form_editarUsu.php?msje=ok");
             exit;
         } else {
             // Error en la consulta SQL
-            $error = "Error en la consulta SQL: " . mysqli_error($conex);
-            header("Location: ../formularios/form_editarUsu.php?msje=" . urlencode($error));
+            $error.= "No se realizó Actualización! " ;
+            header("Location: ../formularios/form_editarUsu.php?msje=" .$error);
             exit;
         }
     
     } else {
         // Si falta algún dato
         $error = "Faltan Datos.";
-        header("Location: ../formularios/form_editarUsu.php?msje=" . urlencode($error));
+        header("Location: ../formularios/form_editarUsu.php?msje=" .$error);
         exit;
     }
 

@@ -52,22 +52,25 @@ if(!empty($_POST['dni']) && !empty($_POST['clave'])){
                           $_SESSION['tipousu']=$fila['tipo_de_usuario'];               
           
                             header("Location:../listados/menu.php");
-
-                  }
-                  }
-                } else{   
-          
-      $error.="error en la insercion de datos ";
-      header("Location:form_ingresar.php?mensaje=".$error);
-
-      }}else{
-
-
-  	$error.="Faltan Datos ";
-	header("Location:form_ingresar.php?mensaje=".$error);
-  
-}
-	
+                          }
+                        } else {
+                            // Contraseña incorrecta
+                            $error = "Contraseña incorrecta.";
+                            header("Location: ../index.php?mensaje=" . urlencode($error));
+                            exit();
+                        }
+                    } else {
+                        // DNI no encontrado
+                        $error = "DNI no encontrado.";
+                        header("Location: ../index.php?mensaje=" . urlencode($error));
+                        exit();
+                    }
+                } else {
+                    // Faltan datos
+                    $error = "Faltan datos, por favor complete todos los campos.";
+                    header("Location: ../index.php?mensaje=" . urlencode($error));
+                    exit();
+                }
 
 ?> 
 

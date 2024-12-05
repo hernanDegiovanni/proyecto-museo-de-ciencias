@@ -25,7 +25,7 @@ if(isset($_SESSION['dnige']) ){
    <?php
      
      include('header.php');
-     include('formularios/-form-ingresar.contacto.php');
+     include('formularios/form_ingresar.php');
    ?>
       
     

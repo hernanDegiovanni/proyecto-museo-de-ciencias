@@ -7,7 +7,14 @@
         <h1 class="modal-title fs-5" id="exampleModalLabel">Ingresar de usuarios</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
+
       <div class="modal-body">
+        <!-- Alerta de error -->
+        <?php if(isset($_GET['mensaje']) && !empty($_GET['mensaje'])): ?>
+          <div class="alert alert-danger" role="alert">
+            <?php echo htmlspecialchars($_GET['mensaje']); ?>
+          </div>
+        <?php endif; ?>
         <form action="acciones/ingresar.php" method="post">
           <div class="mb-3">
             <label for="dni" class="col-form-label">* DNI USURIO</label>
@@ -23,22 +30,6 @@
         <button type="submit" class="btn btn-primary" name="btn_ingresar" id="btn_ingresar">ingresar</button>
       </div>
         </form>
-        <!-- el mensage no salta HAY QUE SOLUCIONARLO -->
-         <?php
-         if (isset($_GET["mensaje"])){
- 
-          if($_GET["mensaje"]!="ok"){
- 
-          echo "<div class='text-center mt-4 mb-5'><div class='alert alert-danger' role='alert'><strong>".$_GET["mensaje"]."</strong></div></div>"; 
-           
-        }else{
- 
-                  
-         echo "<div class='text-center mt-4 mb-5'><div class='alert alert-success' role='alert'><strong>Datos agregados exitosamente!</strong></div></div>";  
-        
-        }  
-      } 
-   ?> 
       </div>
 
       

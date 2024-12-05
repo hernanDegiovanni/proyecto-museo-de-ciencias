@@ -2,12 +2,26 @@
 
  
  session_start();
+ require_once "../conexion.php";
 
  // Verifica si el parámetro 'id' está presente en la URL
 
-    $id = $_POST['idUsuario'];
+ 
+    
+ if (!isset($_GET['msje'])){
+
+    // Guarda el id enviado por parámetro en URL, desde listado.php, y lo evalúa con $_GET
+  
+     $id=$_POST['idUsuario'];
+ 
+  }else{
+      
+       // Guarda la Variable de Sesión ids, creada en el archivo editar.php 
+ 
+       $id=$_SESSION['ids'];
+  }   
 // Conexion a la Base de Datos Biblioteca 
- require_once "../conexion.php";
+
 
  $sql = "SELECT * FROM usuario WHERE idUsuario = '$id'";
  $result = mysqli_query($conex, $sql);
@@ -36,13 +50,7 @@
     <section>
   
   
-      <?php 
-      // Uso de GET para mostrar Mensaje resultante de la operacion de Actualizacion
-      // Verifica si hay un mensaje en la URL
-      if (isset($_GET['msje'])) {
-          $mensaje = $_GET['msje'];
-      }
-      ?>
+    
     
     <div class="container mt-2 mb-5">
     <div class="text-center my-5 text-success"><h2>Editar Usuario</h2></div>	
@@ -105,12 +113,25 @@
     </form>
      
       
-      <!-- Mostrar el mensaje de error (si existe) -->
-      <?php if (isset($mensaje)): ?>
-          <div class="alert alert-danger mt-3">
-              <?php echo htmlspecialchars($mensaje); ?>
-          </div>
-      <?php endif; ?>
+      
+    <?php
+    
+    // Uso de GET para mostrar Mensaje resultante de la operacion de Actualizacion
+
+    if (isset($_GET["msje"])){
+
+       if($_GET["msje"]!="ok"){
+
+         echo "<div class='text-center mt-4 mb-5'><div class='alert alert-danger' role='alert'><strong>".$_GET["msje"]."</strong><a href='../listados/usuariosList.php' class='text-primary ms-3'>Volver al Listado</a></div></div>"; 
+         
+       }else{
+
+               
+         echo "<div class='text-center mt-4 mb-5'><div class='alert alert-success' role='alert'><strong>"."Actualización Exitosa!"."</strong><a href='../listados/usuariosList.php' class='text-primary ms-3'>Volver al Listado</a></div></div>";  
+       
+       }  
+  } 
+  ?> 
    
   
    </section>

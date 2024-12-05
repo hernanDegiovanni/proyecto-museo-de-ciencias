@@ -106,7 +106,7 @@ session_start();
         }else{
  
                   
-         echo "<div class='text-center mt-4 mb-5'><div class='alert alert-success' role='alert'><strong>Datos agregados exitosamente!</strong></div></div>";  
+         echo "<div class='text-center mt-4 mb-5'><div class='alert alert-success' role='alert'><strong>Datos agregados exitosamente!</strong><a href='../listados/usuariosList.php' class='text-primary ms-3'>Volver al Listado</a></div></div>";  
         
         }  
    } 
