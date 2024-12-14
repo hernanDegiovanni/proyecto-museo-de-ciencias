@@ -31,6 +31,9 @@ if(isset($_SESSION['dnige']) ){
     
    <!-- Inicio --> 
 
+
+   <!-- Inicio pibe --> 
+
    
    
   <section>
