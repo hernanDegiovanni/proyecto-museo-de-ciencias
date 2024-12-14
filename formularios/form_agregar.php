@@ -58,7 +58,7 @@ session_start();
 
  <div class="col-sm-6 mb-3">
     <label for="observacion_piezas" class="form-label">* observacion</label>
-    <textarea class="form-control" id="observacion_piezas" name="observacion_piezas" rows="3"></textarea>
+    <textarea class="form-control" id="observacion_piezas" name="observacion_piezas" rows="3" ></textarea>
   </div>
 
   <div class="col-sm-6 mb-3">
@@ -326,19 +326,19 @@ session_start();
     
     // Uso de GET para mostrar Mensaje resultante 
 
-    if (isset($_GET["mensaje"])){
+    if (isset($_GET["msje"])){
 
-    	 if($_GET["mensaje"]!="ok"){
+      if($_GET["msje"]!="ok"){
 
-         echo "<div class='text-center mt-4 mb-5'><div class='alert alert-danger' role='alert'><strong>".$_GET["mensaje"]."</strong></div></div>"; 
-         
-       }else{
+        echo "<div class='text-center mt-4 mb-5'><div class='alert alert-danger' role='alert'><strong>".$_GET["msje"]."</strong></div></div>"; 
+        
+      }else{
 
-                 
-        echo "<div class='text-center mt-4 mb-5'><div class='alert alert-success' role='alert'><strong>Producto exitosamente agregado!</strong><a href='listado.php' class='text-primary ms-3'>Volver al Listado</a></div></div>";  
-       
-       }  
-  } 
+              
+        echo "<div class='text-center mt-4 mb-5'><div class='alert alert-success' role='alert'><strong>"."Se Agrego Exitosa Mente!"."</strong><a href='../listados/piezasList.php' class='text-primary ms-3'>Volver al Listado</a></div></div>";  
+      
+      }  
+ } 
   ?> 
   
 

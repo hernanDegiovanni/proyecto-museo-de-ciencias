@@ -62,7 +62,7 @@
   
     <div class="col-sm-6 mb-3">
      <label for="dni" class="form-label">* DNI</label>
-     <input type="text" class="form-control" name="dni" id="dni" value="<?=$usuario['dni'];?>">
+     <input type="text" class="form-control" name="dni" id="dni" value="<?=$usuario['dni'];?>" maxlength="8" pattern="\d{8}">
     </div>
     
     <div class="col-sm-6 mb-3">

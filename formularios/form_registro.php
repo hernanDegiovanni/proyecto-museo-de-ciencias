@@ -32,7 +32,7 @@ session_start();
    
    <div class="col-sm-6 mb-3">
      <label for="dni" class="form-label">* DNI</label>
-     <input type="text" class="form-control" name="dni" id="dni" placeholder="Ingresa DNI de 8 dígitos">
+     <input type="text" class="form-control" name="dni" id="dni" placeholder="Ingresa DNI de 8 dígitos"  maxlength="8" pattern="\d{8}">
    </div>
    
    <div class="col-sm-6 mb-3">
