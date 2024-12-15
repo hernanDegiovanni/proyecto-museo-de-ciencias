@@ -16,8 +16,8 @@ if(isset($_SESSION['dnige']) ){
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
  
@@ -86,11 +86,17 @@ if(isset($_SESSION['dnige']) ){
   </div>
 
  </section>
-  <?php
+
+ <section>
+
+ <?php
      
      include('cartas.php');
 
    ?>
+
+</section>
+  
 
 
 
