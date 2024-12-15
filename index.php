@@ -87,7 +87,7 @@ if(isset($_SESSION['dnige']) ){
 
  </section>
 
- <section>
+ <section class="container-fluid">
 
  <?php
      
