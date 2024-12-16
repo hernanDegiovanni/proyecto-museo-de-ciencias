@@ -73,26 +73,63 @@ if(isset($_SESSION['dnige']) && isset($_SESSION['dniadmin'])){
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
-</div>
-
-  </section>
- <section>
-  <h2 class="letraeventos">EVENTOS
-  </h2>
-  <div>
-    
   </div>
 
- </section>
+  </section>
 
- <section class="container-fluid">
+ <section>
+  <div class="contenedor">
+    <h2 class="letraeventos">EVENTOS
+  </div>
+  
+    <div>
 
- <?php
+    </div>
+  </h2>
+  <br>
+  <div>
+    <?php
      
      include('cartas.php');
 
    ?>
+  </div>
 
+ </section>
+
+ 
+
+<section>
+<div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+ <div class="modal-content contacto">
+   <div class="modal-header">
+     <h1 class="modal-title fs-5" id="exampleModalLabel">Envianos tu mensaje</h1>
+     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+   </div>
+   <div class="modal-body">
+     <form>
+       <div class="mb-3">
+         <label for="nombre" class="col-form-label">Nombre:</label>
+         <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresa tu Nombre">
+       </div>
+       <div class="mb-3">
+       <label for="email" class="col-form-label">* Email</label>
+      <input type="email" class="form-control" name="email" id="email" placeholder="Ingresa tu Correo Electrónico">
+      </div>
+       <div class="mb-3">
+         <label for="text" class="col-form-label">Mensaje:</label>
+         <textarea class="form-control" id="text" placeholder="Ingresa tu mensaje"></textarea>
+       </div>
+     </form>
+   </div>
+   <div class="modal-footer">
+     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+     <button type="button" class="btn btn-primary">Send message</button>
+   </div>
+ </div>
+</div>
+</div>
 </section>
   
 
@@ -100,48 +137,103 @@ if(isset($_SESSION['dnige']) && isset($_SESSION['dniadmin'])){
 
    
    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  
+  <!--<footer>
 
-   <footer>
+
+
+   ventana de contacto 
+
+
+</footer>--> 
+  
+    <!-- Contenido principal de la página -->
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <footer>
     <h3>Siguenos en nuestras redes sociales:</h3>
     <div class="redes_sociales">
       <a href="https://facebook.com"><img src="imagenes/facebook.png" alt="facebook"  ></a>
       <a href="https://whatsapp.com"><img src="imagenes/whatsapp.png" alt="whatsapp"  ></a>
       <a href="https://instagram.com"><img src="imagenes/instagram.png" alt="instagram"  ></a> 
      </div>
+    <div class="col-9 col-md-6">
+    <div class="data-container">
+      <!-- COMPLETAR CON LOS DATOS CORRESPONDIENTES "<H3>" PARA TITULO, "<P>" PARA INFORMACION Y "<BR>" EN CASO DE QUE SE QUIERA UN SALTO DE LINEA-->
+      <h2>CONTACTO</h2>
+      <p> <b>Dirección | Address</b> </p>
+      <p> Hipólito Yrigoyen 800-Liceo Municipal  </p>
+      <p>San Cristóbal - Santa Fe - Argentina </p>
 
-     <!-- ventana de contacto --> 
+      <p><a href="https://www.fcnym.unlp.edu.ar/">
+      <img class="museo" src="/frontend/clients/347d0ec0744bd6d573afb5b0b217298ef55d02f2/footer_contacto_y_mapa/icono_fcnym-92a8a1e14a686f4b9e65fb3df65ef15a.svg" alt="Logo Facultad de Ciencias naturales y museo" width="160"> 
+        </a></p>
+    </div>
+    
+  </div>
+  
+  
+  <div class="col-12 col-md-4">
+    <div class="contact-container">
 
-<div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content contacto">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Envianos tu mensaje</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="mb-3">
-            <label for="nombre" class="col-form-label">Nombre:</label>
-            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresa tu Nombre">
-          </div>
-          <div class="mb-3">
-          <label for="email" class="col-form-label">* Email</label>
-         <input type="email" class="form-control" name="email" id="email" placeholder="Ingresa tu Correo Electrónico">
-         </div>
-          <div class="mb-3">
-            <label for="text" class="col-form-label">Mensaje:</label>
-            <textarea class="form-control" id="text" placeholder="Ingresa tu mensaje"></textarea>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
-      </div>
+      <div class="contact-form"> 
+
+  <form id="contact-form">       
+    <div>
+      <input type="hidden" name="_csrf" value="rIWvUE-IbD7Beeg4FzgweuhO38PotlIVpyQ47dbUwX8">
+      <input type="text" name="asunto" class="contact_subject" placeholder="Asunto">
+      <input type="text" name="nombre" class="contact_name" placeholder="Nombre">
+      <input type="text" name="email" class="contact_email" placeholder="E-mail">
+    </div>
+    <textarea name="mensaje" class="contact_mensaje" placeholder="Mensaje"></textarea>
+          
+    <div class="contact-btn"> 
+      <input type="submit" value="Enviar" class="contact_submit">
+      <input type="reset" value="Borrar todo" class="contact_clear">
+    </div>
+       
+  </form>
+
+</div>
+
+<script type="text/javascript">
+
+  contactForm = jQuery('#contact-form');
+  
+  contactForm.on('submit', function(e) {
+      e.preventDefault();
+      
+      contactForm.find('.contact_submit').prop('disabled', true).val('Enviando...');
+      
+      $.post('/_serve/27807/mail', contactForm.serialize(), function(data) {
+          alert('Su mensaje ha sido enviado satisfactoriamente');
+        })
+        .fail(function() {
+          alert('El envío del mensaje ha fallado. Intente nuevamente en otro momento.');
+        })
+        .always(function() {
+          contactForm.find('.contact_submit').prop('disabled', false).val('Enviar');
+        });
+    }); 
+
+</script>
     </div>
   </div>
+  
+    <div class="col-1 col-md-1 ">
+    
+  </div>   
 </div>
-   </footer>
+
+</div>
+  </div>
+  </div>
+</div>
+    </footer>
+   
    
 
 </body>
