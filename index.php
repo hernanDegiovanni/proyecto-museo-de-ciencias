@@ -1,10 +1,8 @@
 <?php
 session_start();
-if(isset($_SESSION['dnige']) ){
-  header("location:gerente.php");
-} else if(isset($_SESSION['dniadmin'])) { 
+if(isset($_SESSION['dnige']) && isset($_SESSION['dniadmin'])){
   header("location:./listados/menu.php");
- }
+} 
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -110,6 +108,39 @@ if(isset($_SESSION['dnige']) ){
       <a href="https://whatsapp.com"><img src="imagenes/whatsapp.png" alt="whatsapp"  ></a>
       <a href="https://instagram.com"><img src="imagenes/instagram.png" alt="instagram"  ></a> 
      </div>
+
+     <!-- ventana de contacto --> 
+
+<div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content contacto">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Envianos tu mensaje</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="col-form-label">Nombre:</label>
+            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Ingresa tu Nombre">
+          </div>
+          <div class="mb-3">
+          <label for="email" class="col-form-label">* Email</label>
+         <input type="email" class="form-control" name="email" id="email" placeholder="Ingresa tu Correo Electrónico">
+         </div>
+          <div class="mb-3">
+            <label for="text" class="col-form-label">Mensaje:</label>
+            <textarea class="form-control" id="text" placeholder="Ingresa tu mensaje"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
    </footer>
    
 

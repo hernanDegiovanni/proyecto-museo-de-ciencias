@@ -1,5 +1,9 @@
 <?php
 
+
+if(!isset($_SESSION['dniadmin'])){
+    header("location:../index.php");
+   }
 require_once "../conexion.php";
 
 $sql="SELECT * FROM usuario";
@@ -102,20 +106,7 @@ $result=mysqli_query($conex,$sql);
    
    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
  </body> 
- <!--require_once "conexion.php";
-if (isset($_POST['buscar']) && !empty($_POST['buscar'])){
-    $valor=$_POST['buscar'];
-    $sql="SELECT categoria.*, productos.* FROM categoria,productos where (categoria.id=productos.idCategoria) and productos.nombre like '%$valor%' ORDER BY Productos.idproducto";
 
-    $result=mysqli_query($conex,$sql);
-
-}else{ 
-
-
- $sql="SELECT categoria.*, productos.* FROM categoria,productos where (categoria.id=productos.idCategoria) ORDER BY Productos.idproducto";
-
- $result=mysqli_query($conex,$sql);
-}-->
  </html>
 
 

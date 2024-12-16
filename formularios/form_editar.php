@@ -1,8 +1,10 @@
 <?php
-// Conexion a la Base de Datos Biblioteca 
- 
- session_start();
 
+ session_start();
+ 
+  if(!isset($_SESSION['dniadmin']) &&  !isset($_SESSION['dnige'])){
+      header("location:../index.php");
+     }
  require_once "../conexion.php";
 
 

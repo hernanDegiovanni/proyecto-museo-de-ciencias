@@ -1,10 +1,9 @@
 
 <?php
 session_start();
-//echo $_SESSION['dnige'];
-//die();
+
  if(!isset($_SESSION['dniadmin'])){
-     header("location:index.php");
+     header("location:../index.php");
     }
 
 ?> 

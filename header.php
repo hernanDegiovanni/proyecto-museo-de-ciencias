@@ -40,24 +40,25 @@
          </ul>
          <?php
          
-        }else if(isset($_SESSION['dniGe']))  {
+        }else if(isset($_SESSION['dnige']))  {
         
         ?>
          <ul class="navbar-nav">
       	<li class="nav-item">
-          <a class="nav-link" href="#">GERENTE</a>
+          <a class="nav-link" href="./listados/menu.php">GERENTE</a>
         </li>
-       
        </ul>
-        <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-         <a href="" class="nav-link"> <?php echo  $_SESSION['nombreGe']. $_SESSION['apellidoGe'] ?></a>
-        </li>	
-       
-        <li class="nav-item">
-          <a class="nav-link" href="../acciones/salir.php">SALIR</a>
-        </li>	
         
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+           <a class="nav-link" href="../index.php">inicio</a>
+          </li>	
+          <li class="nav-item">
+           <a href="" class="nav-link"> <?php echo  $_SESSION['nombreGe']. $_SESSION['apellidoGe'] ?></a>
+          </li>	
+          <li class="nav-item">
+           <a class="nav-link" href="../acciones/salir.php">SALIR</a>
+          </li> 
        </ul>
 
        <?php 
@@ -65,27 +66,22 @@
 
        ?>
 
-<ul class="navbar-nav">
+      <ul class="navbar-nav">
       	<li class="nav-item">
-          <a class="nav-link" >ADMINISTRADOR</a>
+          <a class="nav-link" href="./listados/menu.php">ADMINISTRADOR</a>
         </li>
-        
-        
-        
-       
-       </ul>
+   
+      </ul>
         <ul class="navbar-nav ms-auto">
-
-      
-      
-
-        <li class="nav-item">
-         <a href="" class="nav-link"> <?php echo  $_SESSION['nombreadmin']." ". $_SESSION['apellidoadmin'] ?></a>
-        </li>	
-       
-        <li class="nav-item">
-          <a class="nav-link" href="../acciones/salir.php">SALIR</a>
-        </li>	
+          <li class="nav-item">
+           <a class="nav-link" href="../index.php">inicio</a>
+          </li>	
+          <li class="nav-item">
+           <a href="" class="nav-link"> <?php echo  $_SESSION['nombreadmin']." ". $_SESSION['apellidoadmin'] ?></a>
+          </li>	
+          <li class="nav-item">
+            <a class="nav-link" href="../acciones/salir.php">SALIR</a>
+          </li>	
         
        </ul>
 

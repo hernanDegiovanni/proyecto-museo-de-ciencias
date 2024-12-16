@@ -1,12 +1,13 @@
 <?php
-session_start();
-//echo $_SESSION['dnicli'];
-//die();
- if(!isset($_SESSION['dniadmin'])){
-     header("location:index.php");
-    }
 
+session_start();
+
+if(!isset($_SESSION['dnige']) && !isset($_SESSION['dniadmin'])){
+  header("location:../index.php");
+ }
 ?>
+
+
 
 <html lang="es">
 
@@ -18,8 +19,9 @@ session_start();
 
    ?>
 
-  
-
+<?php
+if(isset($_SESSION['dniadmin']))  {
+  ?>
 <section class="container text-center">
     
     <div class="border border-secondary ">
@@ -27,28 +29,34 @@ session_start();
         <h2> menu administrador</h2>
         <a class="btn btn-primary btn-sm mb-2" href="usuariosList.php"  role="button">usuarios</a>
         <a class="btn btn-primary btn-sm mb-2" href="piezasList.php"     role="button">piezas</a>
-      
-   
-   <div>
-   <a class="btn btn-primary btn-sm mb-2" href="../formularios/form_agregar.php"     role="button">AGREGAR PIEZA</a>
-   
-   <a class="btn btn-primary btn-sm mb-2" href="../formularios/form_registro.php"     role="button">AGREGAR usuario</a>
-
-
+       
+        <a class="btn btn-primary btn-sm mb-2" href="../formularios/form_agregar.php"     role="button">AGREGAR PIEZA</a>
+        <a class="btn btn-primary btn-sm mb-2" href="../formularios/form_registro.php"     role="button">AGREGAR usuario</a>
    </div>
-
-    
-
-    
 </section>
 
 
+<?php
+}else if(isset($_SESSION['dnige'])){
 
+?>
+<section class="container text-center">
+    
+    <div class="border border-secondary ">
+        
+        <h2> menu de gerente </h2>
+     
+        <a class="btn btn-primary btn-sm mb-2" href="piezasList.php"     role="button">piezas</a>
+            
+        <a class="btn btn-primary btn-sm mb-2" href="../formularios/form_agregar.php"     role="button">AGREGAR PIEZA</a>
+   </div>
+</section>
 
+<?php
 
+}
 
-
- 
+?>
  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>

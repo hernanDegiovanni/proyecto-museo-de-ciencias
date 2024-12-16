@@ -238,7 +238,7 @@
           </div>
 
           
-
+          <a class="btn btn-primary btn-sm mb-2 " href="./listados/listadoVisitante.php" role="button">listado De Piezas</a>
 
 </section>
 

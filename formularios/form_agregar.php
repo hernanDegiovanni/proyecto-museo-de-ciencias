@@ -1,12 +1,10 @@
 
 <?php
 session_start();
-//echo $_SESSION['dnicli'];
-//die();
- if(!isset($_SESSION['dniadmin'])){
-     header("location:index.php");
+
+ if(!isset($_SESSION['dniadmin']) &&  !isset($_SESSION['dnige'])){
+     header("location:../index.php");
     }
-//$categorias=$conex->query("SELECT * FROM *")
 ?>
 
 <html lang="es">

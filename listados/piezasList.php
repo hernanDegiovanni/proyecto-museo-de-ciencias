@@ -1,12 +1,18 @@
 <?php
+session_start();
 
+if(!isset($_SESSION['dniadmin']) &&  !isset($_SESSION['dnige'])){
+    header("location:../index.php");
+   }
  require_once "../conexion.php";
 
 // Consulta para obtener la información necesaria
 $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante where (donante.idDonante=pieza.Donante_idDonante )";
 
    $result=mysqli_query($conex,$sql);
+
  ?>
+
 <html>
  <body> 
  <?php
@@ -108,7 +114,7 @@ $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante wher
         </section>
 
 
-   
+ 
    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
  </body> 
 

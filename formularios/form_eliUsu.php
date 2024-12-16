@@ -1,7 +1,9 @@
 <?php
-
- 
  session_start();
+
+ if(!isset($_SESSION['dniadmin'])){
+  header("location:../index.php");
+ }
  require_once "../conexion.php";
 
  // Verifica si el parámetro 'id' está presente en la URL
