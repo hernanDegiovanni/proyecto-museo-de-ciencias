@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-11-2024 a las 04:59:44
+-- Tiempo de generación: 16-12-2024 a las 14:52:56
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -40,7 +40,6 @@ CREATE TABLE `arqueologia` (
 --
 
 INSERT INTO `arqueologia` (`idArqueologia`, `integridad_historica`, `estetica`, `material`, `Pieza_idPieza`) VALUES
-(1, 'pueba1', 'pueba1', 'pueba1', 23),
 (2, 'prueba de arequeologia 2', 'prueba de arequeologia 2', 'prueba de arequeologia 2', 49);
 
 -- --------------------------------------------------------
@@ -67,7 +66,6 @@ CREATE TABLE `botanica` (
 --
 
 INSERT INTO `botanica` (`idBotanica`, `clasificacion`, `reino`, `familia`, `especie`, `orden`, `division`, `clase`, `descripcion`, `Pieza_idPieza`) VALUES
-(1, 'algas', 'vegetal', 'adad', 'adaad', 'adad', '', 'adad', '', 5),
 (3, 'briofitos', 'vegetal', 'prueba de botanica 2', 'prueba de botanica 2', 'prueba de botanica 2', 'prueba de botanica 2', 'prueba de botanica 2', 'prueba de botanica 2', 50);
 
 -- --------------------------------------------------------
@@ -94,7 +92,8 @@ INSERT INTO `donante` (`idDonante`, `nombre`, `apellido`, `fecha`) VALUES
 (4, 'nestor', 'fernandez', '2024-10-08'),
 (5, 'kratos', 'atreus', '2024-10-08'),
 (6, 'kratos', 'atreus', '2024-10-08'),
-(7, 'pueba8', 'pueba8', '2024-10-08');
+(7, 'pueba8', 'pueba8', '2024-10-08'),
+(8, '', '', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -116,7 +115,7 @@ CREATE TABLE `geologia` (
 INSERT INTO `geologia` (`idGeologia`, `tipo_rocas`, `descripcion`, `Pieza_idPieza`) VALUES
 (5, 'edicio3', 'edicio3', 51),
 (6, '3', 'prueba de geologia 2', 52),
-(7, 'sedimentarias', 'prueba de geologia 2', 53);
+(8, '5', '5', 61);
 
 -- --------------------------------------------------------
 
@@ -137,13 +136,23 @@ CREATE TABLE `ictiologia` (
 --
 
 INSERT INTO `ictiologia` (`idIctiologia`, `clasificacion`, `especies`, `descripcion`, `Pieza_idPieza`) VALUES
-(1, '', '', '', 26),
-(2, 'Condricios', '', 'prueba de ictiologia 2', 54),
-(3, 'Condricios', '', 'prueba de ictiologia 2\r\n', 55),
-(4, 'Condricios', '', 'prueba de ictiologia 2\r\n', 56),
-(5, 'Condricios', '', 'salada', 57),
-(6, 'Osteictios', '', 'salada', 58),
-(7, 'aver que onda', 'aver que onda', 'aver que onda', 60);
+(7, 'aver que onda', 'aver que onda', 'aver que onda', 60),
+(8, 'aver que onda', 'aver que onda', 'ss', 62);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `oología`
+--
+
+CREATE TABLE `oología` (
+  `idOología` int(11) NOT NULL,
+  `clasificacion` varchar(255) DEFAULT NULL,
+  `tipo` varchar(255) DEFAULT NULL,
+  `especie` varchar(255) DEFAULT NULL,
+  `descripcion` longtext DEFAULT NULL,
+  `Pieza_idPieza` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 -- --------------------------------------------------------
 
@@ -157,13 +166,6 @@ CREATE TABLE `osteologia` (
   `clasificacion` varchar(255) DEFAULT NULL,
   `Pieza_idPieza` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
-
---
--- Volcado de datos para la tabla `osteologia`
---
-
-INSERT INTO `osteologia` (`idOsteologia`, `especie`, `clasificacion`, `Pieza_idPieza`) VALUES
-(1, 'pueba6', 'pueba6', 40);
 
 -- --------------------------------------------------------
 
@@ -208,25 +210,18 @@ CREATE TABLE `pieza` (
 --
 
 INSERT INTO `pieza` (`idPieza`, `num_inventario`, `estado_conservacion`, `fecha_ingreso`, `cantidad_de_piezas`, `clasificacion`, `observacion`, `Donante_idDonante`) VALUES
-(5, '1', 'buenardobich', '2024-09-24', '1', 'botanica', '', NULL),
-(23, '34', 'pueba1', '2024-09-30', '34', 'arqueologia', 'pueba1', 2),
-(26, '33', 'pueba4', '2024-09-30', '33', 'ictiologia', 'pueba4', 3),
-(39, '3', 'editar11', '2024-11-18', '3', 'oología', 'editar11', 1),
-(40, '1', 'pueba6', '2024-10-08', '1', 'osteologia', 'pueba6', 4),
 (46, '32', 'editar2', '2024-10-08', '324', 'paleontologia', 'editar2', 1),
 (48, '1', 'pueba8', '2024-10-08', '5', 'zoologia', 'pueba8', 7),
 (49, '333', 'prueba de arequeologia 2', '2024-10-08', '55', 'arqueologia', 'prueba de arequeologia 2', 1),
 (50, '55', 'prueba de botanica 2', '2024-10-08', '5', 'botanica', 'prueba de botanica 2', 1),
 (51, '6333', 'edicio3', '2024-11-18', '2', 'geologia', 'edicio3', 1),
 (52, '3', 'prueba de geologia 2', '2024-10-08', '5585', 'geologia', 'prueba de geologia 2', 1),
-(53, '566', 'prueba de geologia 2', '2024-10-08', '6', 'geologia', 'prueba de geologia 2', 1),
-(54, '5', 'prueba de ictiologia 2', '2024-10-08', '5', 'ictiologia', 'prueba de ictiologia 2', 1),
-(55, '4', 'prueba de ictiologia 2', '2024-10-08', '9965', 'ictiologia', 'prueba de ictiologia 2\r\n', 1),
-(56, '5616', 'prueba de ictiologia 2', '2024-10-08', '44141', 'ictiologia', 'prueba de ictiologia 2\r\n', 1),
-(57, '1', 'salada', '2024-10-08', '1', 'ictiologia', 'salada', 1),
-(58, '-1', 'salada', '2024-10-08', '56', 'ictiologia', 'salada', 1),
-(59, '1', 'porfa', '2024-10-08', '12', 'ictiologia', 'porfa', 1),
-(60, '9', 'aver que onda', '2024-10-29', '11', 'ictiologia', 'aver que onda', 1);
+(60, '9', 'aver que onda', '2024-10-29', '11', 'ictiologia', 'aver que onda', 1),
+(61, '1', 'pueba1', '2024-12-10', '1', 'geologia', '6', 8),
+(62, '1', 'prueba de carga de especie', '2024-12-05', '1', 'ictiologia', 'sera', 1),
+(63, '1', 'prueba de errores', '2024-12-05', '1', 'geologia', 'prueba de errores', 1),
+(64, '23456', 'probando validación de caracteres ', '2024-12-14', '1', 'arqueologia', 'probando validación de caracteres ', 1),
+(65, '12131', 'probando validación de caracteres ', '2024-12-14', '3', 'ictiologia', 'probando validación de caracteres ', 1);
 
 -- --------------------------------------------------------
 
@@ -250,8 +245,9 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`idUsuario`, `dni`, `nombre`, `apellido`, `email`, `clave`, `fecha_alta`, `tipo_de_usuario`) VALUES
-(5, '41493477', 'hernan', 'de giovannii', 'hernandegiovannii@gmail.com', '12345678', '2024-11-04', 'administrador'),
-(7, '45454545', 'prueba', 'prueba', 'prueba3@gmail.com', '$2y$10$1oPsju0JZ7ozVdFF7UMO3egUn99diCyG8TtIMmW8UQUuu2hqwiYJS', '2024-11-05', 'administrador');
+(8, '45146120', 'hernandez', 'perdomeiyon', 'peeerdomssssssssssso@gmail.con', '$2y$10$zgzkxd.FicoDR0L7ZYbhMu6RTdBvDpzMqb2s0bcAimwGkmPrh3/ue', '2024-12-03', 'administrador'),
+(11, '10000000', 'admin', 'admin', 'admin@gmail.com', '$2y$10$paqnDMYNduhLbjZ/Mnl3B.zvh8NvwK0xJtlRNum4IcxBzQu/QFmuq', '2024-12-14', 'administrador'),
+(12, '20000000', 'gerente', 'a', 'gerente@gimail.com', '$2y$10$Fh1iKBpoWdWR8GWiE9I3SOQi0iduz62Zieaitz5XJIK.9F9pmF4Mi', '2024-12-14', 'gerente');
 
 -- --------------------------------------------------------
 
@@ -330,6 +326,13 @@ ALTER TABLE `ictiologia`
   ADD KEY `fk_Ictiologia_Pieza1_idx` (`Pieza_idPieza`);
 
 --
+-- Indices de la tabla `oología`
+--
+ALTER TABLE `oología`
+  ADD PRIMARY KEY (`idOología`),
+  ADD KEY `fk_Octologia_Pieza1_idx` (`Pieza_idPieza`);
+
+--
 -- Indices de la tabla `osteologia`
 --
 ALTER TABLE `osteologia`
@@ -391,19 +394,25 @@ ALTER TABLE `botanica`
 -- AUTO_INCREMENT de la tabla `donante`
 --
 ALTER TABLE `donante`
-  MODIFY `idDonante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idDonante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `geologia`
 --
 ALTER TABLE `geologia`
-  MODIFY `idGeologia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idGeologia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `ictiologia`
 --
 ALTER TABLE `ictiologia`
-  MODIFY `idIctiologia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idIctiologia` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `oología`
+--
+ALTER TABLE `oología`
+  MODIFY `idOología` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `osteologia`
@@ -421,13 +430,13 @@ ALTER TABLE `paleontologia`
 -- AUTO_INCREMENT de la tabla `pieza`
 --
 ALTER TABLE `pieza`
-  MODIFY `idPieza` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `idPieza` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `idUsuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `zoologia`
@@ -462,6 +471,12 @@ ALTER TABLE `geologia`
 --
 ALTER TABLE `ictiologia`
   ADD CONSTRAINT `fk_Ictiologia_Pieza1` FOREIGN KEY (`Pieza_idPieza`) REFERENCES `pieza` (`idPieza`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+--
+-- Filtros para la tabla `oología`
+--
+ALTER TABLE `oología`
+  ADD CONSTRAINT `fk_Octologia_Pieza1` FOREIGN KEY (`Pieza_idPieza`) REFERENCES `pieza` (`idPieza`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Filtros para la tabla `osteologia`
