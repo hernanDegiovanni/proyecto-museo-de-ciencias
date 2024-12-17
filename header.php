@@ -15,26 +15,21 @@
 
           <ul class="navbar-nav">
           <li class="nav-item titulo">
-             <a class="navbar-brand" href="#">
-            <img src="imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "MUSEO DE LA CIUDAD"
-            </a>
-        </li>
+                <a class="navbar-brand" href="#">
+                <img src="imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "MUSEO DE LA CIUDAD"
+                </a>
+           </li>
         
          </ul>
           
          <ul class="navbar-nav ms-auto">
-
-              <li class="nav-item">
-              <a class="nav-link" href="#">Novedades</a>
-              </li>
           <li class="nav-item"> 
             <a class="nav-link" data-bs-toggle="modal" data-bs-target="#ingresar" >Ingresar</a>
             
           </li>
-          <li class="nav-item"> 
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contacto" >Contactanos</a>
-            
-          </li>
+          <li class="nav-item active">
+             <a class="nav-link" href="contact.php">contacto</a>
+           </li>
           
           
          </ul>
