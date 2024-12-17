@@ -62,15 +62,11 @@ if ($result && mysqli_num_rows($result) > 0) {
     <div class="carousel-item">
       <img src="imagenes/cabezaderex.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5></h5>
-        <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
     <div class="carousel-item">
       <img src="imagenes/nose.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Third slide label</h5>
-        <p>Some representative placeholder content for the third slide.</p>
       </div>
     </div>
   </div>
@@ -86,12 +82,12 @@ if ($result && mysqli_num_rows($result) > 0) {
 
   </section>
  <section class=" text-center">
-  <div class="card mb-3" style="max-width: 70%;  background-color: rgba(235, 209, 67, 0.6);">
+  <div class="card mb-3" style="max-width: 100%;  background-color: #999915;">
 
   <?php if ($evento): ?>
   <div class="row g-0">
     <div class="col-md-4">
-    <img src="imagenes/<?php echo $evento['archivoimagen']; ?>" alt="Imagen del evento" class="img-fluid rounded-start"  style="width:100%; max-width:400px;"> 
+    <img src="imagenes/evento.jpg"<?php echo $evento['archivoimagen']; ?>" alt="Imagen del evento" class="img-fluid rounded-start"  style="width:100%; max-width:400px;"> 
     </div>
     <div class="col-md-8">
       <div class="card-body">

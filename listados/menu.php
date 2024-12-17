@@ -26,7 +26,7 @@ if(isset($_SESSION['dniadmin']))  {
     
     <div class="border border-secondary ">
         
-        <h2> menu administrador</h2>
+        <h2> Menú del Administrador </h2>
         <a class="btn btn-primary btn-sm mb-2" href="usuariosList.php"  role="button">usuarios</a>
         <a class="btn btn-primary btn-sm mb-2" href="piezasList.php"     role="button">piezas</a>
         <a class="btn btn-primary btn-sm mb-2" href="../formularios/form_agregar.php"  role="button">AGREGAR PIEZA</a>
@@ -44,12 +44,12 @@ if(isset($_SESSION['dniadmin']))  {
     
     <div class="border border-secondary ">
         
-        <h2> menu de gerente </h2>
+        <h2> Menú de Gerente </h2>
      
         <a class="btn btn-primary btn-sm mb-2" href="piezasList.php"     role="button">piezas</a>
             
         <a class="btn btn-primary btn-sm mb-2" href="../formularios/form_agregar.php"     role="button">AGREGAR PIEZA</a>
-        <a class="btn btn-primary btn-sm mb-2" href="../formularios/eventos.php"  role="button">cargar evento</a>
+        <a class="btn btn-primary btn-sm mb-2" href="../formularios/eventos.php"  role="button">Cargar evento</a>
         
    </div>
 </section>

@@ -1,7 +1,7 @@
 <div class="contenedor coloF" >
   <div class="text-center"> 
-    <h2> clasificaciónes de museo</h2>
-    <h4> Aqui podra encontrar informacion brebe de que estudia cada rama de las diferentes clasificasiones</h4>
+    <h2> Clasificación de Categorías</h2>
+    <h4> En este apartado puede ver las distintas categorías que integran nuestro museo.</h4>
 </div>
               <div class="tarjetas">
 

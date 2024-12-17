@@ -60,7 +60,7 @@
                            <input class="contactusmess" placeholder="Mensaje" type="type" Message="Name">
                         </div>
                         <div class="col-md-12">
-                           <button class="send_btn">enviar</button>
+                           <button class="send_btn">Enviar</button>
                         </div>
                      </div>
                   </form>
@@ -94,7 +94,7 @@
                <div class="container">
                   <div class="row">
                      <div class="col-md-12">
-                        <p><p>hecho por Hernan de Giovanni y Nestor Fernandez 2024</p></a></p>
+                        <p><p>Hecho por Hernan de Giovanni y Nestor Fernandez 2024</p></a></p>
                      </div>
                   </div>
                </div>

@@ -70,7 +70,7 @@
       </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-           <a class="nav-link" href="../index.php">inicio</a>
+           <a class="nav-link" href="../index.php">Inicio</a>
           </li>	
           <li class="nav-item">
            <a href="" class="nav-link"> <?php echo  $_SESSION['nombreadmin']." ". $_SESSION['apellidoadmin'] ?></a>
