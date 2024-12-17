@@ -1,4 +1,18 @@
+<?php
+require_once "conexion.php";
 
+$sql="SELECT * FROM evento ORDER BY idEvent  DESC LIMIT 1;";
+
+$result=mysqli_query($conex,$sql);
+// Verificar si se encontró un evento
+if ($result && mysqli_num_rows($result) > 0) {
+    // Obtener el último evento
+    $evento = mysqli_fetch_assoc($result);
+} else {
+    // Si no hay eventos
+    $evento = null;
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -73,19 +87,26 @@
   </section>
  <section class=" text-center">
   <div class="card mb-3" style="max-width: 70%;  background-color: rgba(235, 209, 67, 0.6);">
+
+  <?php if ($evento): ?>
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="imagenes/evento.jpg" class="img-fluid rounded-start" alt="...">
+    <img src="imagenes/<?php echo $evento['archivoimagen']; ?>" alt="Imagen del evento" class="img-fluid rounded-start"  style="width:100%; max-width:400px;"> 
     </div>
     <div class="col-md-8">
       <div class="card-body">
-      <h2 class="card-title letraeventos" style="background-color: rgba(214, 214, 209, 0.603);">EVENTOS</h2>
-        <p class="card-text">informasion del evento </p>
-        <p class="card-text">mas info</p>
+      <h2 class="card-title letraeventos" style="background-color: rgba(214, 214, 209, 0.603);"><?php echo $evento['titulo']; ?></h2>
+        <p class="card-text"><?php echo nl2br(htmlspecialchars($evento['texto'])); ?></p>
+        <p class="card-text"><strong>Fecha:</strong><?php echo $evento['fecha']; ?></p>
+        <p class="card-text"><strong>Dirección:</strong> <?php echo $evento['direccion']; ?></p>
+        <?php else:?> 
+            <p>No hay eventos cargados aún.</p>
+        <?php endif; ?>
       </div>
     </div>
   </div>
 </div>
+
 
  </section>
   <?php
