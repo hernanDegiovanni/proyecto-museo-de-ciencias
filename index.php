@@ -1,130 +1,102 @@
-<?php
-session_start();
-if(isset($_SESSION['dnige']) && isset($_SESSION['dniadmin'])){
-  header("location:./listados/menu.php");
-} 
-?>
 
 <!DOCTYPE html>
-<html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1"> 
-      <title>museo</title>
-      <link rel="stylesheet" href="estilo.css">
-      <link rel="stylesheet" href="recursos/css/bootstrap.min.css">
-      <link rel="stylesheet" href="recursos/css/style.css">
-      <link rel="stylesheet" href="recursos/css/responsive.css">
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <link rel="stylesheet" href="recursos/css/jquery.mCustomScrollbar.min.css">
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-   </head>
-   
-   <body class="main-layout">
-
-      <div class="loader_bg">
-         <div class="loader"><img src="imagenes/loading.gif" alt="#" /></div>
-      </div>
-   
-      <?php
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+ 
+   <?php
      
-        include('header.php');
-        include('formularios/form_ingresar.php');
-       ?>
-      <section class="banner_main">
-         <div id="banner1" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-               <li data-target="#banner1" data-slide-to="0" class="active"></li>
-               <li data-target="#banner1" data-slide-to="1"></li>
-               <li data-target="#banner1" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-               <div class="carousel-item active">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="text-bg">
-                           <h1> <span class="blu">Bienvenido <br></span>Museo de la Ciudad de San Cristobal</h1>
-                           <figure><img src="imagenes/museo2.jpg" alt="#"/></figure>
-                         
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="text-bg">
-                           <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                           <figure><img src="imagenes/cabezaderex.jpg" alt="#"/></figure>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="carousel-item">
-                  <div class="container">
-                     <div class="carousel-caption">
-                        <div class="text-bg">
-                           <h1> <span class="blu">Welcome <br></span>To Our Sunglasses</h1>
-                           <figure><img src="imagenes/nose.jpg" alt="#"/></figure>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-            <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
-            <i class="fa fa-arrow-left" aria-hidden="true"></i>
-            </a>
-            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
-            <i class="fa fa-arrow-right" aria-hidden="true"></i>
-            </a>
-         </div>
-      </section>
-      <!-- para eventos-->
-      <div class="about">
-         <div class="container">
-            <div class="row d_flex">
-               <div class="col-md-5">
-                  <div class="about_img">
-                     <figure><img src="imagenes/evento.jpg" alt="#"/></figure>
-                  </div>
-               </div>
-               <div class="col-md-7">
-                  <div class="titlepage">
-                     <h2>Titulo de evento</h2>
-                     <p>descripcion de evento .</p>
-                  </div>
-                  <a class="read_more" href="#">nose</a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- about section -->
-      <!-- Our  Glasses section -->
-      <div class="glasses">
-               <div class="col-md-10 offset-md-1">
-                  <div class="titlepage">
-                     <h2>Clasificasiones Que Puedes Encontrar en Nuestro Museo</h2>
-                     <p>Aqui puedes encontrar toda la informacion breve sobre que estudia cada rama que puedes encontrar en nuestro museo de cienscias 
-                     </p>
-                     
-                  </div>
-               </div>
-      </div>
-                      <?php
-                        
-                        include('cartas.php');
+     include('header.php');
+     include('formularios/form_ingresar.php');
+   ?>
+      
+    
+   <!-- Inicio --> 
 
-                      ?>
+
+   <!-- Inicio pibe --> 
 
    
+   
+  <section style=" margin-bottom: 40px">
+   
+  <div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagenes/museo2.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Museo de la Ciudad de San Cristobal </h3>
+        <p>cuidad de san cristobal</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/cabezaderex.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/nose.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
-<footer>
+  </section>
+ <section class=" text-center">
+  <div class="card mb-3" style="max-width: 70%;  background-color: rgba(235, 209, 67, 0.6);">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img src="imagenes/evento.jpg" class="img-fluid rounded-start" alt="...">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+      <h2 class="card-title letraeventos" style="background-color: rgba(214, 214, 209, 0.603);">EVENTOS</h2>
+        <p class="card-text">informasion del evento </p>
+        <p class="card-text">mas info</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ </section>
+  <?php
+     
+     include('cartas.php');
+
+   ?>
+
+
+
+   <footer>
     <h3>Siguenos en nuestras redes sociales:</h3>
     <div class="redes_sociales">
       <a href="https://facebook.com"><img src="imagenes/facebook.png" alt="facebook"  ></a>
@@ -132,18 +104,8 @@ if(isset($_SESSION['dnige']) && isset($_SESSION['dniadmin'])){
       <a href="https://instagram.com"><img src="imagenes/instagram.png" alt="instagram"  ></a> 
      </div>
    </footer>
-      <!-- end footer -->
-      <!-- Javascript files-->
-      <script src="recursos/js/jquery.min.js"></script>
-      <script src="recursos/js/popper.min.js"></script>
-      <script src="recursos/js/bootstrap.bundle.min.js"></script>
-      <script src="recursos/js/jquery-3.0.0.min.js"></script>
-      <!-- sidebar -->
-      <script src="recursos/js/jquery.mCustomScrollbar.concat.min.js"></script>
-      <script src="recursos/js/custom.js"></script>
-    
-   </body>
+   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
 </html>
-
-
-   

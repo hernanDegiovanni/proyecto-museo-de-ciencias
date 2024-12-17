@@ -38,7 +38,7 @@
 
 </div>
 
-<!-- 
+
 <div class="modal fade" id="contacto" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content contacto">
@@ -63,9 +63,9 @@
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Send message</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">salir</button>
+        <button type="button" class="btn btn-primary">enviar mensaje</button>
       </div>
     </div>
   </div>
-</div> -->
+</div> 

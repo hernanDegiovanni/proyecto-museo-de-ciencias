@@ -23,13 +23,14 @@
          </ul>
           
          <ul class="navbar-nav ms-auto">
-          <li class="nav-item"> 
+         <li class="nav-item"> 
             <a class="nav-link" data-bs-toggle="modal" data-bs-target="#ingresar" >Ingresar</a>
             
           </li>
-          <li class="nav-item active">
-             <a class="nav-link" href="contact.php">contacto</a>
-           </li>
+          <li class="nav-item"> 
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contacto" >Contactanos</a>
+            
+          </li>
           
           
          </ul>

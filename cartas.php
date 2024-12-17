@@ -1,4 +1,8 @@
-<div class="contenedor">
+<div class="contenedor coloF" >
+  <div class="text-center"> 
+    <h2> clasificaciónes de museo</h2>
+    <h4> Aqui podra encontrar informacion brebe de que estudia cada rama de las diferentes clasificasiones</h4>
+</div>
               <div class="tarjetas">
 
             
@@ -109,7 +113,9 @@
             </div>
 
           </div>
+<div class="text-center">
+    <a class="btn btn-warning  btn-lg mb-2 " href="./listados/listadoVisitante.php" role="button">listado De Piezas</a>
 
+</div>
           
-          <a class="btn btn-primary btn-sm mb-2 " href="./listados/listadoVisitante.php" role="button">listado De Piezas</a>
-
+        
