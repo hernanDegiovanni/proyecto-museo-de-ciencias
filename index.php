@@ -62,7 +62,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     <div class="carousel-item">
       <img src="imagenes/cabezaderex.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
-        <h5>Second slide label</h5>
+        <h5></h5>
         <p>Some representative placeholder content for the second slide.</p>
       </div>
     </div>
@@ -120,10 +120,94 @@ if ($result && mysqli_num_rows($result) > 0) {
    <footer>
     <h3>Siguenos en nuestras redes sociales:</h3>
     <div class="redes_sociales">
-      <a href="https://facebook.com"><img src="imagenes/facebook.png" alt="facebook"  ></a>
+      <a href="https://www.facebook.com/sancristobal.gob.ar"><img src="imagenes/facebook.png" alt="facebook"  ></a>
       <a href="https://whatsapp.com"><img src="imagenes/whatsapp.png" alt="whatsapp"  ></a>
       <a href="https://instagram.com"><img src="imagenes/instagram.png" alt="instagram"  ></a> 
      </div>
+
+    
+  <div class="row main-green" style="margin-top:1em;">
+  <div class="wrapper col-12">
+    <div class="row">
+    <div class="col-12">
+  <div class="tres-columnas-new row">
+  
+  <div class="col-1 col-md-1 ">
+    
+  </div>   
+  
+  <div class="col-9 col-md-6">
+    <div class="data-container">
+      <!-- COMPLETAR CON LOS DATOS CORRESPONDIENTES "<H3>" PARA TITULO, "<P>" PARA INFORMACION Y "<BR>" EN CASO DE QUE SE QUIERA UN SALTO DE LINEA-->
+      <h2>CONTACTO</h2>
+      <p> <b>Dirección | Address</b> </p>
+      <p> - Hipólito Yrigoyen  800 - </p>
+      <p>San Cristóbal - Santa Fe - Argentina </p>
+
+      
+      
+    </div>
+    
+  </div>
+  
+  
+  <div class="col-12 col-md-4">
+    <div class="contact-container">
+
+      <div class="contact-form"> 
+
+  <form id="contact-form">       
+    <div>
+      <input type="hidden" name="_csrf" value="peGO7B2590bC4i6fOMouPjy9u5DkKZDJ89cqqnCmEnc">
+      <input type="text" name="asunto" class="contact_subject" placeholder="Asunto">
+      <input type="text" name="nombre" class="contact_name" placeholder="Nombre">
+      <input type="text" name="email" class="contact_email" placeholder="E-mail">
+    </div>
+    <textarea name="mensaje" class="contact_mensaje" placeholder="Mensaje"></textarea>
+          
+    <div class="contact-btn"> 
+      <input type="submit" value="Enviar" class="contact_submit">
+      <input type="reset" value="Borrar todo" class="contact_clear">
+    </div>
+       
+  </form>
+
+</div>
+
+<script type="text/javascript">
+
+  contactForm = jQuery('#contact-form');
+  
+  contactForm.on('submit', function(e) {
+      e.preventDefault();
+      
+      contactForm.find('.contact_submit').prop('disabled', true).val('Enviando...');
+      
+      $.post('/_serve/27807/mail', contactForm.serialize(), function(data) {
+          alert('Su mensaje ha sido enviado satisfactoriamente');
+        })
+        .fail(function() {
+          alert('El envío del mensaje ha fallado. Intente nuevamente en otro momento.');
+        })
+        .always(function() {
+          contactForm.find('.contact_submit').prop('disabled', false).val('Enviar');
+        });
+    }); 
+
+</script>
+    </div>
+  </div>
+  
+    <div class="col-1 col-md-1 ">
+    
+  </div>   
+</div>
+
+</div>
+  </div>
+  </div>
+</div>
+
    </footer>
    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 

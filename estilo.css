@@ -7,6 +7,7 @@ body{
    background: rgba(220, 181, 108, 0.735) 
 }
 
+
 footer {
     height: 20%;
     width: 100%;
@@ -20,11 +21,114 @@ footer h2 {
     padding: 10px 0;
 }
 
+
 footer img {
-
-    width: 5%;
-
+   width: 5%;
 }
+element.style {
+    margin-top: 1em;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex
+;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.main-green {
+    background-color: #999915;
+}
+
+---------
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+body {
+    font-family: Open Sans, sans-serif !important;
+}
+html {
+    font-family: Open Sans;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+-------------------
+.tres-columnas-new .contact-container .contact-form form textarea {
+    float: left;
+    width: 100%;
+    margin: 0px 0px 20px 0px;
+    padding: 10px 20px;
+    background: #999915;
+    font-size: 16px;
+    font-family: 'Open Sans', Arial, serif;
+    border: white solid 1.5px;
+    border-radius: 13px;
+    color: white;
+}
+textarea {
+    font-style: ;
+    font-variant-ligatures: ;
+    font-variant-caps: ;
+    font-variant-numeric: ;
+    font-variant-east-asian: ;
+    font-variant-alternates: ;
+    font-variant-position: ;
+    font-variant-emoji: ;
+    font-weight: ;
+    font-stretch: ;
+    font-size: ;
+    font-family: monospace;
+    font-optical-sizing: ;
+    font-size-adjust: ;
+    font-kerning: ;
+    font-feature-settings: ;
+    font-variation-settings: ;
+    text-rendering: auto;
+    color: fieldtext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    line-height: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    appearance: auto;
+    -webkit-rtl-ordering: logical;
+    resize: -internal-textarea-auto;
+    cursor: text;
+    overflow-wrap: break-word;
+    background-color: field;
+    column-count: initial !important;
+    margin: 0em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: light-dark(rgb(118, 118, 118), rgb(133, 133, 133));
+    border-image: initial;
+    padding: 2px;
+    white-space: pre-wrap;
+}
+
+  
+
+  
 .coloF{
     background-color: rgba(233, 219, 94, 0.603);
 }
@@ -32,6 +136,13 @@ footer img {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
+  }
+
+  .titulo2{
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #ffffff;
   }
 
 .letraeventos {
