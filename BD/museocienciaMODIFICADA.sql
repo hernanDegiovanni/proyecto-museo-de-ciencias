@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 16-12-2024 a las 14:52:56
+-- Tiempo de generación: 17-12-2024 a las 11:49:45
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -94,6 +94,29 @@ INSERT INTO `donante` (`idDonante`, `nombre`, `apellido`, `fecha`) VALUES
 (6, 'kratos', 'atreus', '2024-10-08'),
 (7, 'pueba8', 'pueba8', '2024-10-08'),
 (8, '', '', '0000-00-00');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `evento`
+--
+
+CREATE TABLE `evento` (
+  `idEvent` int(11) NOT NULL,
+  `texto` varchar(255) NOT NULL,
+  `fecha` date NOT NULL,
+  `direccion` varchar(255) NOT NULL,
+  `titulo` varchar(40) NOT NULL,
+  `archivoimagen` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `evento`
+--
+
+INSERT INTO `evento` (`idEvent`, `texto`, `fecha`, `direccion`, `titulo`, `archivoimagen`) VALUES
+(1, 'prueba de evento', '2024-12-17', 'son Lorenzo 1367', 'hola como estas', 'banderaSanCristobal.png'),
+(2, 'hola', '2024-12-17', 'son Lorenzo 1367', 'hola como estas de nuevo', '1.png');
 
 -- --------------------------------------------------------
 
@@ -312,6 +335,12 @@ ALTER TABLE `donante`
   ADD PRIMARY KEY (`idDonante`);
 
 --
+-- Indices de la tabla `evento`
+--
+ALTER TABLE `evento`
+  ADD PRIMARY KEY (`idEvent`);
+
+--
 -- Indices de la tabla `geologia`
 --
 ALTER TABLE `geologia`
@@ -395,6 +424,12 @@ ALTER TABLE `botanica`
 --
 ALTER TABLE `donante`
   MODIFY `idDonante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `evento`
+--
+ALTER TABLE `evento`
+  MODIFY `idEvent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `geologia`
