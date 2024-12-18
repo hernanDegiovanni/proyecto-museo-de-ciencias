@@ -87,7 +87,7 @@ if ($result && mysqli_num_rows($result) > 0) {
   <?php if ($evento): ?>
   <div class="row g-0">
     <div class="col-md-4">
-    <img src="imagenes/evento.jpg"<?php echo $evento['archivoimagen']; ?>" alt="Imagen del evento" class="img-fluid rounded-start"  style="width:100%; max-width:400px;"> 
+    <img src="imagenes/<?php echo $evento['archivoimagen']; ?>" alt="Imagen del evento" class="img-fluid rounded-start"  style="width:100%; max-width:400px;"> 
     </div>
     <div class="col-md-8">
       <div class="card-body">
