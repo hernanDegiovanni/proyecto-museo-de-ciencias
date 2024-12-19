@@ -1,17 +1,12 @@
 <?php
-
-session_start();
-
-if(!isset($_SESSION['dnige']) && !isset($_SESSION['dniadmin'])){
-  header("location:../index.php");
- }
+require_once "retriction.php";
 ?>
 
 
 
 <html lang="es">
 
-<body>
+<body >
  
 <?php
        include_once('../head.php');

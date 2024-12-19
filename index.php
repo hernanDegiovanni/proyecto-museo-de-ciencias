@@ -81,27 +81,33 @@ if ($result && mysqli_num_rows($result) > 0) {
 </div>
 
   </section>
- <section class=" text-center">
-  <div class="card mb-3" style="max-width: 100%;  background-color: #999915;">
-
-  <?php if ($evento): ?>
-  <div class="row g-0">
-    <div class="col-md-4">
-    <img src="imagenes/<?php echo $evento['archivoimagen']; ?>" alt="Imagen del evento" class="img-fluid rounded-start"  style="width:100%; max-width:400px;"> 
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-      <h2 class="card-title letraeventos" style="background-color: rgba(214, 214, 209, 0.603);"><?php echo $evento['titulo']; ?></h2>
-        <p class="card-text"><?php echo nl2br(htmlspecialchars($evento['texto'])); ?></p>
-        <p class="card-text"><strong>Fecha:</strong><?php echo $evento['fecha']; ?></p>
-        <p class="card-text"><strong>Dirección:</strong> <?php echo $evento['direccion']; ?></p>
-        <?php else:?> 
-            <p>No hay eventos cargados aún.</p>
-        <?php endif; ?>
-      </div>
+ <section class=" text-center ">
+ <section class="text-center">
+  <!-- Contenedor principal centrado -->
+  <div class="d-flex justify-content-center align-items-center" >
+    <div class="card mb-3" style="max-width: 90%; background-color:#ddddc6cc; "> <!-- Ajusta el valor de 20px -->
+      <?php if ($evento): ?>
+        <div class="row g-0">
+          <div class="col-md-4">
+            <img src="imagenes/<?php echo ($evento['archivoimagen'] ?? 'default.jpg'); ?>" alt="Imagen del evento" class="img-fluid rounded-start" style="max-width: 100%; height: auto;">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h2 class="card-title letraeventos" style="background-color: rgba(145, 204, 35, 0.6);">
+                <?php echo ($evento['titulo']); ?>
+              </h2>
+              <p class="card-text"><?php echo nl2br(htmlspecialchars($evento['texto'])); ?></p>
+              <p class="card-text"><strong>Fecha:</strong> <?php echo ($evento['fecha']); ?></p>
+              <p class="card-text"><strong>Dirección:</strong> <?php echo ($evento['direccion']); ?></p>
+            </div>
+          </div>
+        </div>
+      <?php else: ?> 
+        <p>No hay eventos cargados aún.</p>
+      <?php endif; ?>
     </div>
   </div>
-</div>
+</section>
 
 
  </section>
@@ -114,15 +120,16 @@ if ($result && mysqli_num_rows($result) > 0) {
 
 
    <footer>
-    <h3>Siguenos en nuestras redes sociales:</h3>
-    <div class="redes_sociales">
+   
+    <div class="redes_sociales" style=" background-color:#ddddc6cc; "> 
+      <h3>Siguenos en nuestras redes sociales:</h3>
       <a href="https://www.facebook.com/sancristobal.gob.ar"><img src="imagenes/facebook.png" alt="facebook"  ></a>
       <a href="https://whatsapp.com"><img src="imagenes/whatsapp.png" alt="whatsapp"  ></a>
       <a href="https://instagram.com"><img src="imagenes/instagram.png" alt="instagram"  ></a> 
      </div>
 
     
-  <div class="row main-green" style="margin-top:1em;">
+  <div class="row main-green" >
   <div class="wrapper col-12">
     <div class="row">
     <div class="col-12">
@@ -170,27 +177,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 
 </div>
 
-<script type="text/javascript">
 
-  contactForm = jQuery('#contact-form');
-  
-  contactForm.on('submit', function(e) {
-      e.preventDefault();
-      
-      contactForm.find('.contact_submit').prop('disabled', true).val('Enviando...');
-      
-      $.post('/_serve/27807/mail', contactForm.serialize(), function(data) {
-          alert('Su mensaje ha sido enviado satisfactoriamente');
-        })
-        .fail(function() {
-          alert('El envío del mensaje ha fallado. Intente nuevamente en otro momento.');
-        })
-        .always(function() {
-          contactForm.find('.contact_submit').prop('disabled', false).val('Enviar');
-        });
-    }); 
-
-</script>
     </div>
   </div>
   

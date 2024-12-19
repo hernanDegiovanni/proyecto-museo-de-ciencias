@@ -4,7 +4,7 @@ body{
 }
 
 .cartas{
-   background: rgba(220, 181, 108, 0.735) 
+   background: rgba(231, 188, 108, 0.735) ;
 }
 
 
@@ -14,7 +14,7 @@ footer {
     text-align: center;
     line-height: 50px;
     letter-spacing: 2px;
-    background-color: rgba(233, 219, 94, 0.603);
+    background-color:#ddddc6cc;
 }
 
 footer h2 {
@@ -46,7 +46,7 @@ element.style {
 *, *::before, *::after {
     box-sizing: border-box;
 }
-user agent stylesheet
+
 div {
     display: block;
     unicode-bidi: isolate;
@@ -83,23 +83,8 @@ html {
     color: white;
 }
 textarea {
-    font-style: ;
-    font-variant-ligatures: ;
-    font-variant-caps: ;
-    font-variant-numeric: ;
-    font-variant-east-asian: ;
-    font-variant-alternates: ;
-    font-variant-position: ;
-    font-variant-emoji: ;
-    font-weight: ;
-    font-stretch: ;
-    font-size: ;
+    
     font-family: monospace;
-    font-optical-sizing: ;
-    font-size-adjust: ;
-    font-kerning: ;
-    font-feature-settings: ;
-    font-variation-settings: ;
     text-rendering: auto;
     color: fieldtext;
     letter-spacing: normal;
@@ -130,7 +115,7 @@ textarea {
 
   
 .coloF{
-    background-color: rgba(233, 219, 94, 0.603);
+    background-color:#ddddc6cc;
 }
 .titulo {
     font-family: "Bebas Neue", sans-serif;

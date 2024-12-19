@@ -1,9 +1,6 @@
 <?php
 
-session_start();
-if(!isset($_SESSION['dniadmin'])){
-    header("location:../index.php");
-   }
+require_once "retriction.php";
 require_once "../conexion.php";
 
 $sql="SELECT * FROM usuario";
@@ -92,18 +89,7 @@ $result=mysqli_query($conex,$sql);
     
     
     </section>    
-    <section class="container text-center">
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="administrador.php">volver al inicio</a>
-        </li>	
-       </ul>
-    </div>
-
-        </section>
-
-   
-   
+  
    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
  </body> 
 

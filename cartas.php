@@ -1,5 +1,5 @@
-<div class="contenedor coloF" >
-  <div class="text-center"> 
+<div class="contenedor " >
+  <div class="text-center coloF " style="max-width: 90%; margin-left: 5%;"> 
     <h2> Clasificación de Categorías</h2>
     <h4> En este apartado puede ver las distintas categorías que integran nuestro museo.</h4>
 </div>
@@ -113,7 +113,7 @@
             </div>
 
           </div>
-<div class="text-center">
+<div class="text-center ">
     <a class="btn btn-warning  btn-lg mb-2 " href="./listados/listadoVisitante.php" role="button">listado De Piezas</a>
 
 </div>

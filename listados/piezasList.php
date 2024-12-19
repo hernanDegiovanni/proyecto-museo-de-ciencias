@@ -1,9 +1,6 @@
 <?php
-session_start();
 
-if(!isset($_SESSION['dniadmin']) &&  !isset($_SESSION['dnige'])){
-    header("location:../index.php");
-   }
+require_once "retriction.php";
  require_once "../conexion.php";
 
 // Consulta para obtener la información necesaria
@@ -103,18 +100,7 @@ $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante wher
     
     
     </section>    
-    <section class="container text-center">
-    <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="piezasList.php">volver al inicio</a>
-        </li>	
-       </ul>
-    </div>
 
-        </section>
-
-
- 
    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
  </body> 
 
