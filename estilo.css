@@ -1,12 +1,19 @@
+
 body{
-    background-image:url("imagenes/pasto.jpg");
-   
+ 
+    background: rgb(34,195,101);
+background: linear-gradient(0deg, rgba(34,195,101,0.8575805322128851) 6%, rgba(34,193,195,0.6979166666666667) 36%, rgba(244,187,51,1) 48%, rgba(253,187,45,0.7539390756302521) 81%, rgba(34,195,101,0.8575805322128851) 98%, rgba(34,195,101,0.8575805322128851) 98%);
 }
+
 
 .cartas{
    background: rgba(231, 188, 108, 0.735) ;
 }
 
+#carousel img{
+    width: 100%;
+    height: 100%;
+}
 
 footer {
     height: 20%;
@@ -38,7 +45,7 @@ element.style {
     margin-left: -15px;
 }
 .main-green {
-    background-color: #999915;
+    background-color: #f15b47be;
 }
 
 ---------

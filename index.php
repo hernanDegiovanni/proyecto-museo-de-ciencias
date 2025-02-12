@@ -43,15 +43,15 @@ if ($result && mysqli_num_rows($result) > 0) {
 
    
    
-  <section style=" margin-bottom: 40px">
+  <section style=" margin-bottom: 40px" >
    
-  <div id="carouselExampleCaptions" class="carousel slide">
+  <div id="carouselExampleCaptions" class="carousel slide" id="carousel">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner" >
     <div class="carousel-item active">
       <img src="imagenes/museo2.jpg" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
@@ -121,12 +121,7 @@ if ($result && mysqli_num_rows($result) > 0) {
 
    <footer>
    
-    <div class="redes_sociales" style=" background-color:#ddddc6cc; "> 
-      <h3>Siguenos en nuestras redes sociales:</h3>
-      <a href="https://www.facebook.com/sancristobal.gob.ar"><img src="imagenes/facebook.png" alt="facebook"  ></a>
-      <a href="https://whatsapp.com"><img src="imagenes/whatsapp.png" alt="whatsapp"  ></a>
-      <a href="https://instagram.com"><img src="imagenes/instagram.png" alt="instagram"  ></a> 
-     </div>
+   
 
     
   <div class="row main-green" >
@@ -157,33 +152,15 @@ if ($result && mysqli_num_rows($result) > 0) {
   <div class="col-12 col-md-4">
     <div class="contact-container">
 
-      <div class="contact-form"> 
-
-  <form id="contact-form">       
-    <div>
-      <input type="hidden" name="_csrf" value="peGO7B2590bC4i6fOMouPjy9u5DkKZDJ89cqqnCmEnc">
-      <input type="text" name="asunto" class="contact_subject" placeholder="Asunto">
-      <input type="text" name="nombre" class="contact_name" placeholder="Nombre">
-      <input type="text" name="email" class="contact_email" placeholder="E-mail">
-    </div>
-    <textarea name="mensaje" class="contact_mensaje" placeholder="Mensaje"></textarea>
-          
-    <div class="contact-btn"> 
-      <input type="submit" value="Enviar" class="contact_submit">
-      <input type="reset" value="Borrar todo" class="contact_clear">
-    </div>
-       
-  </form>
-
-</div>
-
+      
+      <a href="https://www.facebook.com/sancristobal.gob.ar"><img src="imagenes/facebook.png" alt="facebook"  ></a>
+      <a href="https://whatsapp.com"><img src="imagenes/whatsapp.png" alt="whatsapp"  ></a>
+      <a href="https://instagram.com"><img src="imagenes/instagram.png" alt="instagram"  ></a> 
+    
 
     </div>
   </div>
-  
-    <div class="col-1 col-md-1 ">
     
-  </div>   
 </div>
 
 </div>
