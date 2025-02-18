@@ -20,7 +20,7 @@ session_start();
      
 
    ?>
-  <section>
+  <section class="listado">
    
   
    <div class="container mt-2 mb-5">
@@ -83,8 +83,8 @@ session_start();
 </div>
 
    <div class="col-12 text-center">
-   <button type="submit" class="btn btn-primary btn-sm" name="btn_agregar" id="btn_agregar">Agregar</button>
-   <a class="btn btn-primary btn-sm ms-2" href="../listados/menu.php" role="button">Cancelar</a>
+   <button type="submit" class="btn btn-success btn-lg mb-2" name="btn_agregar" id="btn_agregar">Agregar</button>
+   <a class="btn btn-success btn-lg mb-2" href="../listados/menu.php" role="button">Cancelar</a>
    
    </div>
    
@@ -115,7 +115,9 @@ session_start();
  
  
    </section>
-
+   <?php
+     include('../footer.php');
+   ?>
    <script>
      document.getElementById('tipo_de_usuario').addEventListener('change', function() {  
 

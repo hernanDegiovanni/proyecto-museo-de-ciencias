@@ -7,12 +7,13 @@ $result=mysqli_query($conex,$sql);
 ?>
 
 <?php
-   include('../header.php');
+   include_once('../header.php');
    include_once('../head.php');
-
+   include('../formularios/form_ingresar.php');
+ 
 ?>
 
- <section>
+ <section class="listado">
   
  <div class="container text-center">
      <div class="text-center mt-5 mb-3 border border-secondary"><h3>Listado de piezas</h3></div>
@@ -68,7 +69,10 @@ $result=mysqli_query($conex,$sql);
          }
          ?>  
      </tbody>
- </table>
+ </table> 
+  <div class="text-center">
+      <a class="btn btn-success btn-lg mb-2 " href="../index.php" role="button">Volver a inicio</a>
+    </div>
  </div>
    
  <?php
@@ -81,16 +85,13 @@ $result=mysqli_query($conex,$sql);
  
  
  </section>    
-    <section class="container text-center">
-       <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-         <a class="nav-link" href="piezasList.php">volver al inicio</a>
-        </li>	
-       </ul>
- </div>
+  
+  
+   
 
-     </section>
-
+     <?php
+        include_once('../footer.php');
+     ?>
      <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
  </body> 
 

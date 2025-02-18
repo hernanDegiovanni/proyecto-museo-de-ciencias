@@ -1,6 +1,6 @@
 <?php
 // Conexion a la Base de Datos Biblioteca 
- 
+session_start();
  require_once "../conexion.php";
  
  include('../header.php');
@@ -248,7 +248,7 @@ die("Error en la consulta de donate: ");
         
     </div>
     <div class="text-center">
-        <a class="btn btn-success btn-lg mb-2 " href="../listados/listadoVisitante.php"  role="button">volver</a>
+        <a class="btn btn-success btn-lg mb-2 " href="../listados/piezasList.php"  role="button">volver</a>
     </div>
     
 </div>

@@ -24,11 +24,11 @@ session_start();
 
    
    
-  <section class="">
+  <section class="listado">
   
   
   <div class="container mt-2 mb-5">
-  <div class="text-center mt-5 mb-2 text-primary border border-secondary"><h2>Agregar piezas</h2></div>	
+  <div class="text-center text-dark"style="border-radius: 8px; background-color: rgba(20, 119, 53, 0.6);"><h2>Agregar piezas</h2></div>	
   <div class="text-secondary"><p><small>* Dato Obligatorio</small></p></div>
   	
   <form class="row g-3 " action="../acciones/insertar_datos.php" method="POST" enctype="multipart/form-data">
@@ -312,9 +312,9 @@ session_start();
 </div>
 
 
-  <div class="col-12 text-center">
-  <button type="submit" class="btn btn-primary btn-sm" name="btn_agregar" id="btn_agregar">Agregar</button>
-  <a class="btn btn-primary btn-sm ms-2" href="../listados/menu.php" role="button">Cancelar</a>
+  <div class="text-center" style="margin-top: 20px;">
+  <button type="submit" class="btn btn-success btn-lg mb-2" name="btn_agregar" id="btn_agregar" role="button">Agregar</button>
+  <a class="btn btn-success btn-lg mb-2" href="../listados/menu.php" role="button">Cancelar</a>
   </div>
   
   </form>
@@ -343,7 +343,9 @@ session_start();
 
 
   </section>
-
+  <?php
+    include_once('../footer.php');
+  ?>
    
    
    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>

@@ -14,13 +14,50 @@ $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante wher
  <body> 
  <?php
       include_once('../head.php');
-     include_once('menu.php');
+      include_once('../header.php');
 
-   ?>
 
+if(isset($_SESSION['dniadmin']))  {
+  ?>
+<section class="container text-center listado">
+    
+        
+        <h2> Menú del Administrador </h2>
+        <a class="btn btn-success btn-lg mb-2 " href="usuariosList.php"  role="button">usuarios</a>
+        <a class="btn btn-success btn-lg mb-2 " href="piezasList.php"     role="button">piezas</a>
+        <a class="btn btn-success btn-lg mb-2 " href="../formularios/form_agregar.php"  role="button">AGREGAR PIEZA</a>
+        <a class="btn btn-success btn-lg mb-2 " href="../formularios/form_registro.php"  role="button">AGREGAR usuario</a>
+        <a class="btn btn-success btn-lg mb-2 " href="../formularios/eventos.php"  role="button">cargar evento</a>
+   
+</section>
+
+
+<?php
+}else if(isset($_SESSION['dnige'])){
+
+?>
+<section class="container text-center listado">
+    
+    
+        
+        <h2> Menú de Gerente </h2>
+     
+        <a class="btn btn-success btn-lg mb-2 " href="piezasList.php"     role="button">piezas</a>
+            
+        <a class="btn btn-success btn-lg mb-2 " href="../formularios/form_agregar.php"     role="button">AGREGAR PIEZA</a>
+        <a class="btn btn-success btn-lg mb-2 " href="../formularios/eventos.php"  role="button">Cargar evento</a>
+        
+   
+</section>
+
+<?php
+
+}
+
+?>
     <section>
      
-    <div class="container text-center">
+    <div class="container text-center listado" >
         <div class="text-center mt-5 mb-3 border border-secondary"><h3>Listado de piezas</h3></div>
 
         
@@ -75,7 +112,7 @@ $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante wher
                                 </button></form></div>
                             
                             <div class="d-sm-inline-block">
-                                <form action="../formularios/detalles.php" method="post">
+                                <form action="../formularios/detallesLisPI.php" method="post">
                                 <input type="hidden" name="id" value="<?=$fila['idPieza'];?>">
                                 <button class="btn btn-outline-success btn-sm" type="submit" name="btnver" id="btnver">ver
                                 </button></form></div>
@@ -96,11 +133,14 @@ $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante wher
           echo "</table></div>";
           echo "<div class='container text-center lead my-3 py-3'><div class='alert alert-danger my-5 py-4'><p><em>No existen piezaz! </em><a href='index.php' class='text-primary lead ms-2'>Volver</a></p></div></div>";
          }
+         
 	   ?>  
     
     
     </section>    
-
+    <?php
+     include_once('../footer.php');
+    ?>
    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
  </body> 
 

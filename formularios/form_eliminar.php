@@ -79,7 +79,7 @@ if(!isset($_SESSION['dniadmin']) &&  !isset($_SESSION['dnige'])){
 
    
    
-  <section>
+  <section class="listado">
    
   
   <div class="container mt-2 mb-5">
@@ -345,8 +345,8 @@ if(!isset($_SESSION['dniadmin']) &&  !isset($_SESSION['dnige'])){
 
   
   <div class="col-12 text-secondary text-center mt-4"><h5>¿Confirma la eliminación de la Pieza?</a></h5>
-  <div class="text-center mt-0"><button type="submit" class="btn btn-primary btn-sm" name="btnborrar" id="btnborrar">Eliminar</button>
-  <a class="btn btn-primary btn-sm" href="./../listados/piezasList.php" role="button">Cancelar</a></div>	
+  <div class="text-center mt-0"><button type="submit" class="btn btn-danger btn-lg mb-2" name="btnborrar" id="btnborrar">Eliminar</button>
+  <a class="btn btn-success btn-lg mb-2" href="./../listados/piezasList.php" role="button">Cancelar</a></div>	
    
   </div>
   
@@ -357,7 +357,9 @@ if(!isset($_SESSION['dniadmin']) &&  !isset($_SESSION['dnige'])){
   </section>
 
 
-
+  <?php
+     include('../footer.php');
+   ?>
 
 
    

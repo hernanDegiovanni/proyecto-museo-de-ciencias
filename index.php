@@ -28,10 +28,42 @@ if ($result && mysqli_num_rows($result) > 0) {
 </head>
 <body>
  
+<header>
+      <!-- Menú de Navegación -->  
+      <nav class="navbar navbar-expand-md navbar-light nav">
+      <div class="container-fluid">
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav"> 
+          <ul class="navbar-nav">
+          <li class="nav-item titulo">
+                <a class="navbar-brand" href="#">
+                <img src="./imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "MUSEO DE LA CIUDAD"
+                </a>
+           </li>
+         </ul>
+          
+         <ul class="navbar-nav ms-auto">
+         <li class="nav-item"> 
+            <a class="nav-link a" data-bs-toggle="modal" data-bs-target="#ingresar" type="button">Ingresar</a>
+            
+          </li>
+          <li class="nav-item"> 
+            <a class="nav-link a"  href="#contacto" >Contactanos</a>
+            
+          </li>
+          
+         </ul>
+      </div>
+      </div>
+      </nav>       
+</header>
+    
+    
  
    <?php
-     
-     include('header.php');
      include('formularios/form_ingresar.php');
    ?>
       
@@ -81,11 +113,11 @@ if ($result && mysqli_num_rows($result) > 0) {
 </div>
 
   </section>
- <section class=" text-center ">
+ 
  <section class="text-center">
   <!-- Contenedor principal centrado -->
   <div class="d-flex justify-content-center align-items-center" >
-    <div class="card mb-3" style="max-width: 90%; background-color:#ddddc6cc; "> <!-- Ajusta el valor de 20px -->
+    <div class="card mb-3" style="max-width: 90%;  background-color:#20881746; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.384); "> <!-- Ajusta el valor de 20px -->
       <?php if ($evento): ?>
         <div class="row g-0">
           <div class="col-md-4">
@@ -93,7 +125,7 @@ if ($result && mysqli_num_rows($result) > 0) {
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h2 class="card-title letraeventos" style="background-color: rgba(145, 204, 35, 0.6);">
+              <h2 class="card-title letraeventos" style="border-radius: 8px; background-color: rgba(20, 119, 53, 0.6);">
                 <?php echo ($evento['titulo']); ?>
               </h2>
               <p class="card-text"><?php echo nl2br(htmlspecialchars($evento['texto'])); ?></p>
@@ -110,22 +142,16 @@ if ($result && mysqli_num_rows($result) > 0) {
 </section>
 
 
- </section>
+
+ 
   <?php
      
      include('cartas.php');
 
    ?>
-
-
-
-   <footer>
-   
-   
-
-    
+<footer id="contacto">
   <div class="row main-green" >
-  <div class="wrapper col-12">
+  <div class="col-12">
     <div class="row">
     <div class="col-12">
   <div class="tres-columnas-new row">
@@ -134,7 +160,7 @@ if ($result && mysqli_num_rows($result) > 0) {
     
   </div>   
   
-  <div class="col-9 col-md-6">
+  <div class="text-center">
     <div class="data-container">
       <!-- COMPLETAR CON LOS DATOS CORRESPONDIENTES "<H3>" PARA TITULO, "<P>" PARA INFORMACION Y "<BR>" EN CASO DE QUE SE QUIERA UN SALTO DE LINEA-->
       <h2>CONTACTO</h2>
@@ -148,18 +174,16 @@ if ($result && mysqli_num_rows($result) > 0) {
     
   </div>
   
-  
-  <div class="col-12 col-md-4">
-    <div class="contact-container">
+    <div class="contact-container" >
 
       
-      <a href="https://www.facebook.com/sancristobal.gob.ar"><img src="imagenes/facebook.png" alt="facebook"  ></a>
+      <a  href="https://www.facebook.com/sancristobal.gob.ar"><img src="imagenes/facebook.png" alt="facebook"  ></a>
       <a href="https://whatsapp.com"><img src="imagenes/whatsapp.png" alt="whatsapp"  ></a>
       <a href="https://instagram.com"><img src="imagenes/instagram.png" alt="instagram"  ></a> 
     
 
     </div>
-  </div>
+
     
 </div>
 
@@ -169,6 +193,9 @@ if ($result && mysqli_num_rows($result) > 0) {
 </div>
 
    </footer>
+
+
+   
    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
 
 </body>

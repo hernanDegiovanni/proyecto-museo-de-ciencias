@@ -2,7 +2,7 @@
             
 
        <!-- Menú de Navegación -->  
-      <nav class="navbar navbar-expand-md navbar-light bg-light ">
+      <nav class="navbar navbar-expand-md navbar-light nav ">
       <div class="container-fluid">
     
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -16,7 +16,7 @@
           <ul class="navbar-nav">
           <li class="nav-item titulo">
                 <a class="navbar-brand" href="#">
-                <img src="imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "MUSEO DE LA CIUDAD"
+                <img src="../imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "MUSEO DE LA CIUDAD"
                 </a>
            </li>
         
@@ -24,11 +24,11 @@
           
          <ul class="navbar-nav ms-auto">
          <li class="nav-item"> 
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#ingresar" >Ingresar</a>
+            <a class="nav-link a" data-bs-toggle="modal" data-bs-target="#ingresar" type="button">Ingresar</a>
             
           </li>
           <li class="nav-item"> 
-            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#contacto" >Contactanos</a>
+            <a class="nav-link a"  href="#contacto" >Contactanos</a>
             
           </li>
           
@@ -40,20 +40,22 @@
         
         ?>
          <ul class="navbar-nav">
-      	<li class="nav-item">
-          <a class="nav-link" href="./listados/menu.php">GERENTE</a>
+      	<li class="nav-item titulo">
+        <a class="navbar-brand" href="#">
+                <img src="../imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "Gerente"
+                </a>
         </li>
        </ul>
         
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-           <a class="nav-link" href="../index.php">inicio</a>
+           <a class="nav-link a" href="../index.php">inicio</a>
           </li>	
           <li class="nav-item">
-           <a href="" class="nav-link"> <?php echo  $_SESSION['nombreGe']. $_SESSION['apellidoGe'] ?></a>
+           <a href="#" class="nav-link a"> <?php echo  $_SESSION['nombreGe']. $_SESSION['apellidoGe'] ?></a>
           </li>	
           <li class="nav-item">
-           <a class="nav-link" href="../acciones/salir.php">SALIR</a>
+           <a class="nav-link a" href="../acciones/salir.php">SALIR</a>
           </li> 
        </ul>
 
@@ -63,20 +65,22 @@
        ?>
 
       <ul class="navbar-nav">
-      	<li class="nav-item">
-          <a class="nav-link" href="./listados/menu.php">ADMINISTRADOR</a>
+      	<li class="nav-item titulo">
+        <a class="navbar-brand" href="#">
+                <img src="../imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "Administrador"
+                </a>
         </li>
    
       </ul>
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-           <a class="nav-link" href="../index.php">Inicio</a>
+           <a class="nav-link a" href="../index.php">Inicio</a>
           </li>	
           <li class="nav-item">
-           <a href="" class="nav-link"> <?php echo  $_SESSION['nombreadmin']." ". $_SESSION['apellidoadmin'] ?></a>
+           <a href="" class="nav-link" a> <?php echo  $_SESSION['nombreadmin']." ". $_SESSION['apellidoadmin'] ?></a>
           </li>	
           <li class="nav-item">
-            <a class="nav-link" href="../acciones/salir.php">SALIR</a>
+            <a class="nav-link a" href="../acciones/salir.php">SALIR</a>
           </li>	
         
        </ul>

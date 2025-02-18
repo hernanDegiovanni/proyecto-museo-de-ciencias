@@ -49,7 +49,7 @@
      ?>
   
      
-    <section>
+    <section class="listado">
   
   
     
@@ -108,8 +108,8 @@
   
     <div class="col-12 text-center">
     <h5>¿Confirma la Actualizacion del usuario?</a></h5>
-    <button type="submit" class="btn btn-primary btn-sm" name="btn_editar" id="editar">Actualizar</button>
-    <a class="btn btn-primary btn-sm ms-2" href="./../listados/usuariosList.php" role="button">Cancelar</a>
+    <button type="submit" class="btn btn-success btn-lg mb-2" name="btn_editar" id="editar">Actualizar</button>
+    <a class="btn btn-success btn-lg mb-2" href="./../listados/usuariosList.php" role="button">Cancelar</a>
     </div>
     
     </form>
@@ -137,7 +137,9 @@
    
   
    </section>
-  
+   <?php
+     include('../footer.php');
+   ?>
  
   <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
   

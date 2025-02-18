@@ -31,7 +31,7 @@ function validar_alfanumerico($cadena) {
     $var_bool = TRUE;  // Variable que indica si la validación fue exitosa
 
     // Aceptar solo letras (mayúsculas y minúsculas), comas (,) y puntos (.)
-    if (!preg_match("/^[a-zA-Z.,]+$/", $cadena)) {
+    if (!preg_match("/^[a-zA-Z.,\s]+$/", $cadena)) {
         $error .= "Error: la cadena '$cadena' no es válida. Solo se permiten letras, comas y puntos. "; 
         $var_bool = FALSE;  // Si no pasa la validación, asignar FALSE
     }

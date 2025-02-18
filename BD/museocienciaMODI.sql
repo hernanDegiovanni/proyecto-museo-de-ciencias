@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-12-2024 a las 11:49:45
+-- Tiempo de generación: 18-02-2025 a las 11:11:23
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -116,7 +116,9 @@ CREATE TABLE `evento` (
 
 INSERT INTO `evento` (`idEvent`, `texto`, `fecha`, `direccion`, `titulo`, `archivoimagen`) VALUES
 (1, 'prueba de evento', '2024-12-17', 'son Lorenzo 1367', 'hola como estas', 'banderaSanCristobal.png'),
-(2, 'hola', '2024-12-17', 'son Lorenzo 1367', 'hola como estas de nuevo', '1.png');
+(2, 'hola', '2024-12-17', 'son Lorenzo 1367', 'hola como estas de nuevo', '1.png'),
+(3, 'rdtrdrdyiidrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr', '2024-12-18', 'son Lorenzo 1367', 'hola como estas', 'banderaSanCristobal.png'),
+(4, 'Lorem ipsum es el texto que se usa habitualmente en diseño gráfico en demostraciones de tipografías o de borradores de diseño para probar el diseño visual antes de insertar el texto final.', '2025-01-10', 'Hirigoyen 9999', 'hernan sos re pesado', 'certificado.jpg');
 
 -- --------------------------------------------------------
 
@@ -429,7 +431,7 @@ ALTER TABLE `donante`
 -- AUTO_INCREMENT de la tabla `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `idEvent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `idEvent` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `geologia`

@@ -49,13 +49,13 @@
      ?>
   
      
-    <section>
+    <section class="listado">
   
   
     
     
     <div class="container mt-2 mb-5">
-    <div class="text-center my-5 text-success"><h2>Eliminar Usuario</h2></div>	
+    <div class="text-center my-5 text-danger"><h2>Eliminar Usuario</h2></div>	
         
     <form class="row g-3" action="../acciones/eliUsu.php" method="post" enctype="multipart/form-data" >
   
@@ -103,8 +103,8 @@
   
     <div class="col-12 text-center">
     <h5>¿Confirma la Eliminacion del usuario?</a></h5>
-    <button type="submit" class="btn btn-primary btn-sm" name="btn_editar" id="Eliminar">Eliminar</button>
-    <a class="btn btn-primary btn-sm ms-2" href="./../listados/usuariosList.php" role="button">Cancelar</a>
+    <button type="submit" class="bbtn btn-danger btn-lg mb-2" name="btn_editar" id="Eliminar">Eliminar</button>
+    <a class="btn btn-success btn-lg mb-2" href="./../listados/usuariosList.php" role="button">Cancelar</a>
     </div>
     
     </form>
@@ -133,7 +133,9 @@
   
    </section>
   
- 
+   <?php
+     include('../footer.php');
+   ?>
   <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
   
   

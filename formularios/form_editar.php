@@ -76,7 +76,7 @@
     ?>
  
     
-   <section>
+   <section class="listado">
    
    <div class="container mt-2 mb-5">
    <div class="text-center my-5 text-success"><h2>Edita la Pieza</h2></div>	
@@ -352,8 +352,8 @@
  
    <div class="col-12 text-center">
    <h5>¿Confirma la Actualizar de la Pieza?</a></h5>
-   <button type="submit" class="btn btn-primary btn-sm" name="btn_editar" id="editar">Actualizar</button>
-   <a class="btn btn-primary btn-sm ms-2" href="./../listados/piezasList.php" role="button">Cancelar</a>
+   <button type="submit" class="btn btn-success btn-lg mb-2" name="btn_editar" id="editar">Actualizar</button>
+   <a class="btn btn-success btn-lg mb-2" href="./../listados/piezasList.php" role="button">Cancelar</a>
    </div>
    
    </form>
@@ -380,7 +380,9 @@
  
   </section>
  
-
+  <?php
+     include('../footer.php');
+   ?>
  <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
  
  

@@ -18,11 +18,11 @@ if(!isset($_SESSION['dnige']) && !isset($_SESSION['dniadmin'])){
      
 
    ?>
-  <section>
+  <section class="listado">
    
   
    <div class="container mt-2 mb-5">
-   <div class="text-center mt-5 mb-2"><h2>Creacion de EVENTOS</h2></div>	
+   <div class="text-center mt-5 mb-2" style="border-radius: 8px; background-color: rgba(20, 119, 53, 0.6);"><h2>Creacion de EVENTOS</h2></div>	
    <div class="text-secondary"><p><small>* Dato Obligatorio</small></p></div>
        
    <form class="row g-3" action="../acciones/evento.php" method="post" enctype="multipart/form-data">
@@ -52,14 +52,14 @@ if(!isset($_SESSION['dnige']) && !isset($_SESSION['dniadmin'])){
   </div>
 
    <div class="col-12 text-center">
-   <button type="submit" class="btn btn-primary btn-sm" name="btn_agregar" id="btn_agregar">crear</button>
-   <a class="btn btn-primary btn-sm ms-2" href="../listados/menu.php" role="button">Cancelar</a>
+   <button type="submit" class="btn btn-success btn-lg mb-2" name="btn_agregar" id="btn_agregar">crear</button>
+   <a class="btn btn-success btn-lg mb-2" href="../listados/menu.php" role="button">Cancelar</a>
    
    </div>
    
    </form>
     
-     
+  
    <?php
      
      /* Evalúa si existe mensaje, enviado mediante el método GET, desde el archivo validarDatosSocio.php 
@@ -84,6 +84,8 @@ if(!isset($_SESSION['dnige']) && !isset($_SESSION['dniadmin'])){
  
  
    </section>
-  
+   <?php
+     include('../footer.php');
+   ?>
 </body>
 </html>
