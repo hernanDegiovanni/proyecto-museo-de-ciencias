@@ -36,7 +36,7 @@ $result=mysqli_query($conex,$sql);
   
 
  
-    <section>
+    <section class=" listado">
      
     <div class="container text-center">
         <div class="text-center mt-5 mb-3 border border-secondary"><h3>Listado de usuarios</h3></div>
