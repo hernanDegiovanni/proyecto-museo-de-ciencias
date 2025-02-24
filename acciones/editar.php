@@ -25,27 +25,6 @@ $_SESSION['ids']=$id;
                 $observacion_piezas = $_POST['observacion_piezas'];
        
 
-
-                    // Validar si el número de inventario ya existe en la base de datos
-                    $sql_check = "SELECT COUNT(*) FROM pieza WHERE num_inventario = '$num_inventario'";
-                    $result = $conex->query($sql_check);
-                    
-                    if ($result) {
-                        $row = $result->fetch_row();
-                        $count = $row[0];
-
-                        // Si el número de inventario ya existe
-                        if ($count > 0) {
-                            $error = "Error: El número de inventario '$num_inventario' ya existe en la base de datos.";
-                            header("Location: ../formularios/form_editar.php?msje=" . $error);
-                            exit;
-                        }
-                    } else {
-                        $error = "Error al verificar el número de inventario en la base de datos.";
-                        header("Location: ../formularios/form_editar.php?msje=" . $error);
-                        exit;
-                    }
-
 	                $sql = "UPDATE pieza SET num_inventario='$num_inventario', estado_conservacion='$estado_conservacion', fecha_ingreso='$fecha_ingreso', cantidad_de_piezas='$cantidad_de_piezas', clasificacion='$clasificacion', observacion='$observacion_piezas' WHERE idPieza=$id";
 						
 					}else {
