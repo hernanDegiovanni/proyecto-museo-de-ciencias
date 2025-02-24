@@ -1,6 +1,6 @@
 <?php
 require_once "conexion.php";
-
+session_start();
 $sql="SELECT * FROM evento ORDER BY idEvent  DESC LIMIT 1;";
 
 $result=mysqli_query($conex,$sql);
@@ -29,20 +29,26 @@ if ($result && mysqli_num_rows($result) > 0) {
 <body>
  
 <header>
-      <!-- Menú de Navegación -->  
-      <nav class="navbar navbar-expand-md navbar-light nav">
+
+       <!-- Menú de Navegación -->  
+       <nav class="navbar navbar-expand-md navbar-light nav ">
       <div class="container-fluid">
     
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav"> 
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <?php 
+        if(!isset($_SESSION['dnige']) && !isset($_SESSION['dniadmin']) ){ 
+          ?>
+
           <ul class="navbar-nav">
           <li class="nav-item titulo">
                 <a class="navbar-brand" href="#">
                 <img src="./imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "MUSEO DE LA CIUDAD"
                 </a>
            </li>
+        
          </ul>
           
          <ul class="navbar-nav ms-auto">
@@ -55,7 +61,65 @@ if ($result && mysqli_num_rows($result) > 0) {
             
           </li>
           
+          
          </ul>
+         <?php
+         
+        }else if(isset($_SESSION['dnige']))  {
+        
+        ?>
+         <ul class="navbar-nav">
+      	<li class="nav-item titulo">
+        <a class="navbar-brand" href="#">
+                <img src="./imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "Gerente"
+                </a>
+        </li>
+       </ul>
+        
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+           <a class="nav-link a" href="./listados/menu.php"> Menu</a>
+          </li>	
+          <li class="nav-item">
+           <a href="#" class="nav-link a"> <?php echo  $_SESSION['nombreGe']. $_SESSION['apellidoGe'] ?></a>
+          </li>	
+          <li class="nav-item">
+           <a class="nav-link a" href="./acciones/salir.php">SALIR</a>
+          </li> 
+       </ul>
+
+       <?php 
+        }else if(isset($_SESSION['dniadmin'])) { 
+
+       ?>
+
+      <ul class="navbar-nav">
+      	<li class="nav-item titulo">
+        <a class="navbar-brand" href="#">
+                <img src="./imagenes/bug-fill.svg"  href="index.php" alt="Bootstrap" width="30" height="24"> "Administrador"
+                </a>
+        </li>
+   
+      </ul>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+          <a class="nav-link a" href="./listados/menu.php"> Menu</a>
+          </li>	
+          <li class="nav-item">
+           <a href="" class="nav-link" a> <?php echo  $_SESSION['nombreadmin']." ". $_SESSION['apellidoadmin'] ?></a>
+          </li>	
+          <li class="nav-item">
+            <a class="nav-link a" href="./acciones/salir.php">SALIR</a>
+          </li>	
+        
+       </ul>
+
+       <?php
+        }
+
+       ?>
+
+     
       </div>
       </div>
       </nav>       

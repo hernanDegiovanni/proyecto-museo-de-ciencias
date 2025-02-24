@@ -1,8 +1,12 @@
 <?php
 
-require_once "retriction.php";
-require_once "../conexion.php";
 
+require_once "../conexion.php";
+session_start();
+
+if(!isset($_SESSION['dniadmin'])){
+ header("location:../index.php");
+}
 $sql="SELECT * FROM usuario";
 
 $result=mysqli_query($conex,$sql);
@@ -16,8 +20,7 @@ $result=mysqli_query($conex,$sql);
  <body>        
  <?php
           include_once('../head.php');
-    
-if(isset($_SESSION['dniadmin']))  {
+          include_once('../header.php');
     ?>
   <section class="container text-center listado">
       
@@ -31,30 +34,8 @@ if(isset($_SESSION['dniadmin']))  {
      
   </section>
   
-  
-  <?php
-  }else if(isset($_SESSION['dnige'])){
-  
-  ?>
-  <section class="container text-center listado">
-      
-      
-          
-          <h2> Menú de Gerente </h2>
-       
-          <a class="btn btn-success btn-lg mb-2 " href="piezasList.php"     role="button">piezas</a>
-              
-          <a class="btn btn-success btn-lg mb-2 " href="../formularios/form_agregar.php"     role="button">AGREGAR PIEZA</a>
-          <a class="btn btn-success btn-lg mb-2 " href="../formularios/eventos.php"  role="button">Cargar evento</a>
-          
-     
-  </section>
-  
-  <?php
-  
-  }
-  
-  ?>
+
+ 
     <section>
      
     <div class="container text-center">

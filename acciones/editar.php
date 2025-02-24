@@ -6,14 +6,15 @@ require_once "../conexion.php";
 
 //Funcion de Validacion de Datos
 
-require_once "funcionesval.php";
+require_once "funcionesvalpieza.php";
 
 	$error = "";
 
 $id=$_POST['idPieza'];
- 
+
+$_SESSION['ids']=$id;
    
-    if(!empty(trim($_POST['num_inventario'])) && !empty(trim($_POST['estado_conservacion'])) && !empty(trim($_POST['fecha_ingreso'])) && !empty(trim($_POST['cantidad_de_piezas'])) && !empty(trim($_POST['clasificacion']))  && !empty(trim($_POST['observacion_piezas'])) && !empty(trim($_POST['donante_id']))){
+    if(!empty(trim($_POST['num_inventario'])) && !empty(trim($_POST['estado_conservacion'])) && !empty(trim($_POST['fecha_ingreso'])) && !empty(trim($_POST['cantidad_de_piezas'])) && !empty(trim($_POST['clasificacion']))  && !empty(trim($_POST['observacion_piezas']))){
         
         if (ValidacionPieza()) {
                  $num_inventario = $_POST['num_inventario'];

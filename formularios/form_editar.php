@@ -7,9 +7,21 @@
      }
  require_once "../conexion.php";
 
+    
+ if (!isset($_GET['msje'])){
 
-  
+  // Guarda el id enviado por parámetro en URL, desde listado.php, y lo evalúa con $_GET
+
   $id = $_POST["id"];
+
+}else{
+    
+     // Guarda la Variable de Sesión ids, creada en el archivo editar.php 
+
+     $id=$_SESSION['ids'];
+}  
+  
+
 
   // Primero, obtenemos la información de la tabla `pieza`
   $sql_pieza = "SELECT * FROM pieza WHERE idPieza = $id";
@@ -367,12 +379,12 @@
  
         if($_GET["msje"]!="ok"){
  
-          echo "<div class='text-center mt-4 mb-5'><div class='alert alert-danger' role='alert'><strong>".$_GET["msje"]."</strong><a href='listado.php' class='text-primary ms-3'>Volver al Listado</a></div></div>"; 
+          echo "<div class='text-center mt-4 mb-5'><div class='alert alert-danger' role='alert'><strong>".$_GET["msje"]."</strong><a href='../listados/piezasList.php' class='text-primary ms-3'>Volver al Listado</a></div></div>"; 
           
         }else{
  
                 
-          echo "<div class='text-center mt-4 mb-5'><div class='alert alert-success' role='alert'><strong>"."Actualización Exitosa!"."</strong><a href='listado.php' class='text-primary ms-3'>Volver al Listado</a></div></div>";  
+          echo "<div class='text-center mt-4 mb-5'><div class='alert alert-success' role='alert'><strong>"."Actualización Exitosa!"."</strong><a href='../listados/piezasList.php' class='text-primary ms-3'>Volver al Listado</a></div></div>";  
         
         }  
    } 

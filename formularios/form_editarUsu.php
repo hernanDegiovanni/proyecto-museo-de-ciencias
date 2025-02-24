@@ -57,7 +57,7 @@
     <div class="container mt-2 mb-5">
     <div class="text-center my-5 text-success"><h2>Editar Usuario</h2></div>	
         
-    <form class="row g-3" action="../acciones/ediUsu.php" method="post" enctype="multipart/form-data" >
+    <form class="row g-3" action="../acciones/ediUsu.php" method="post" >
   
     
     <input type="hidden" class="form-control" name="idUsuario" id="idUsuario" value="<?=$usuario['idUsuario'];?>">

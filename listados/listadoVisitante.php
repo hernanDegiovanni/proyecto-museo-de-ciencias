@@ -1,6 +1,6 @@
 <?php
 require_once "../conexion.php";
-
+session_start();
 $sql = "SELECT pieza.* ,donante.nombre ,donante.apellido FROM pieza,donante where (donante.idDonante=pieza.Donante_idDonante )";
 
 $result=mysqli_query($conex,$sql);
